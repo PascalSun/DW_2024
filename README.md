@@ -4,7 +4,7 @@
 
 For an end-to-end data warehousing solution, we will be using the following components:
 
-- ETL: [Optional][Apache Airflow](https://airflow.apache.org/) or Python Scripts
+- ETL: [Apache Airflow](https://airflow.apache.org/)[Optional] or Python Scripts
 - Data Warehouse/Lakes: [Kylin](https://kylin.apache.org/)
 - Data Visualization: [Apache Superset](https://superset.apache.org/)
 
