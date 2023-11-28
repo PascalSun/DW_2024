@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  kylin5-machine:
+    image: apachekylin/apache-kylin-standalone:5.0-beta
+    container_name: Kylin5-Machine
+    hostname: Kylin5-Machine
+    platform: linux/amd64
+    mem_limit: 8G
+    ports:
+      - "7071:7070"
+      - "8088:8088"
+      - "9870:9870"
+      - "8032:8032"
+      - "8042:8042"
+      - "2181:2181"
