@@ -1,9 +1,10 @@
 version: '3.8'
 services:
   kylin5:
-    image: apachekylin/apache-kylin-standalone:5.0-beta
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: Kylin5
-    hostname: Kylin5-Machine
     platform: linux/amd64
     ports:
       - "7071:7070"  # Web UI
@@ -12,3 +13,5 @@ services:
       - "8032:8032"
       - "8042:8042"
       - "2181:2181"
+      - "3306:3306"
+      - "10000:10000"
