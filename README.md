@@ -42,3 +42,12 @@ Do tech stack selection and set up the end-to-end data warehousing solution for 
   Tableau, PowerBI, etc.
 - The data source can not be limited to csv files, it can be any other data sources, like online data sources: Twitter,
   Facebook, etc. Doing real-time data warehousing.
+
+## Setup
+
+1. Run `docker-compose up` to start the containers.
+2. After the container is up, and the logs indicate the Kylin is ready for preview, go
+   to http://localhost:7071/kylin/login to
+   access Kylin. Username: ADMIN, Password: KYLIN. You will need to wait minutes after the kylin is Ready logs appear.
+3. Run `docker exec Kylin5 hive --service hiveserver2`, this is to get hive to allow remote connection. You will need to
+   wait minutes after the Hive is Ready to be connected
