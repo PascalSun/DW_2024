@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourStrong(!)Password"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    platform: linux/amd64
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      #      map the data/data-warehouse-install-scripts folder to the container
+      - ./ato/data/data-warehouse-install-script/:/home/data-warehouse-install-script/
+
+volumes:
+  sqlserver_data:
+
+
+     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'YourStrong(!)Password' -i /home/data-warehouse-install-script/instawdbdw.sql
