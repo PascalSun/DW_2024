@@ -1,0 +1,6 @@
+atoti[jupyterlab,sql]
+graphviz
+sqlalchemy
+pandas
+psycopg2-binary
+jupyter
