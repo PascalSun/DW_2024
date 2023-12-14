@@ -1,3 +1,19 @@
+# UWA Data Warehouse 2024 Demo Project
+
+A Data Warehouse project consists of several parts:
+
+- Data collection and settle down, which refers to OLTP (Online Transaction Processing)
+- Data transformation and integration, which refers to ETL (Extract, Transform, Load)
+- Data Warehouse design and implementation, which refers to OLAP (Online Analytical Processing)
+    - The design of the data warehouse normally happens before the ETL process
+- Data analysis and visualization, which refers to BI (Business Intelligence)
+    - This is the end goal of the data warehouse project, which is to provide insights to the business, answer business
+      questions, and help the business make decisions
+
+Let's give the AdventureWorks database as an example to illustrate the above concepts.
+
+`Adventure Works Cycles` is a fictitious, multinational manufacturing company that sells bicycles and accessories.
+
 ## Environment Setup
 
 ### For the database part
