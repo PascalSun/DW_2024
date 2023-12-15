@@ -16,6 +16,19 @@ Let's give the AdventureWorks database as an example to illustrate the above con
 
 ## Environment Setup
 
+### Step 0: Cloning a repository
+
+#### Option 1
+
+You can download the .zip file to your device then upzip the .zip file.
+
+1. On GitHub.com, navigate to the main page of the repository.
+2. Above the list of files, click <> Code.
+3. Click "Download ZIP"
+
+#### Option 2
+
+
 ### For the database part
 
 Make sure you have docker and docker-compose installed on your machine.
