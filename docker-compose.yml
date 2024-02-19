@@ -1,7 +1,11 @@
-version: '3'
+version: '3.8'
+# db and
 services:
-  db:
-    build: ./
+  pgdb:
+    container_name: pgdb
+    build:
+      context: ./
+      dockerfile: Dockerfile_PG
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -16,3 +20,12 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "5050:80"
+
+  sqlserverdb:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: "YourStrong@Passw0rd"
+    ports:
+      - "1433:1433"
