@@ -5,18 +5,18 @@ PRINT '';
 PRINT '*** Dropping Database';
 GO
 
-IF EXISTS (SELECT [name] FROM [master].[sys].[databases] WHERE [name] = N'NewSalesDW_Diagram')
-DROP DATABASE NewSalesDW_Diagram;
+IF EXISTS (SELECT [name] FROM [master].[sys].[databases] WHERE [name] = N'AdventureworksDWDemo')
+DROP DATABASE AdventureworksDWDemo;
 GO
 
 PRINT '';
 PRINT '*** Creating Database';
 GO
 
-Create database NewSalesDW_Diagram
+Create database AdventureworksDWDemo
 Go
 
-Use NewSalesDW_Diagram
+Use AdventureworksDWDemo
 Go
 
 PRINT '';
@@ -25,7 +25,7 @@ GO
 
 Create table DimCustomer
 (
-CustomerID int primary key identity,
+CustomerID int primary key identity(1,1),
 CustomerAltID varchar(10) not null,
 CustomerName varchar(50),
 Gender varchar(20)

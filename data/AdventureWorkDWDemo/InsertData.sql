@@ -9,14 +9,14 @@
  * 3. Copy this script and the install files to C:\Samples\NewSalesDW_Diagram, or
  *    set the following environment variable to your own data path.
  */
- :setvar SqlSamplesSourceDataPath "C:\Samples\NewSalesDW_Diagram\"
+ :setvar SqlSamplesSourceDataPath "/data/AdventureWorkDWDemo/"
 
 /*
  * 4. Append the SQL Server version number to database name if you want to
  *    differentiate it from other installs of AdventureWorksDW (previous lab sample DW)
  */
 
-:setvar DatabaseName "NewSalesDW_Diagram"
+:setvar DatabaseName "AdventureworksDWDemo"
 
 /* Execute the script to insert data
  */
@@ -24,10 +24,11 @@
 BULK INSERT [dbo].[DimCustomer] FROM '$(SqlSamplesSourceDataPath)DimCustomer.csv'
 WITH (
     CHECK_CONSTRAINTS,
-    --CODEPAGE='ACP',
+--     CODEPAGE='ACP',
     DATAFILETYPE='char',
     FIELDTERMINATOR=',',
     ROWTERMINATOR='\n',
+    FORMATFILE = '$(SqlSamplesSourceDataPath)DimCustomer.xml',
     --KEEPIDENTITY,
     TABLOCK
 );
@@ -39,7 +40,7 @@ WITH (
     DATAFILETYPE='char',
     FIELDTERMINATOR=',',
     ROWTERMINATOR='\n',
-    --KEEPIDENTITY,
+    KEEPIDENTITY,
     TABLOCK
 );
 
