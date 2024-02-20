@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Set SQL Server command-line tool (sqlcmd) environment variables
 export SA_PASSWORD=YourStrong@Passw0rd
 export SERVER=localhost
