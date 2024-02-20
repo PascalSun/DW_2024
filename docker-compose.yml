@@ -28,6 +28,6 @@ services:
       dockerfile: Dockerfile_MS
     environment:
       ACCEPT_EULA: Y
-      SA_PASSWORD: "YourStrong@Passw0rd"
+      SA_PASSWORD: "YourStrongPassw0rd"
     ports:
       - "1433:1433"

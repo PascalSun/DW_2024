@@ -6,7 +6,7 @@ echo "Starting SQL Server..."
 
 # Function to check if SQL Server is ready
 check_sql_server() {
-  /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "YourStrong@Passw0rd" -Q "SELECT 1" > /dev/null 2>&1
+  /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "YourStrongPassw0rd" -Q "SELECT 1" > /dev/null 2>&1
   return $?
 }
 
