@@ -25,9 +25,9 @@ GO
 
 Create table DimCustomer
 (
-CustomerID int primary key identity(1,1),
-CustomerAltID varchar(10) not null,
-CustomerName varchar(50),
+CustomerID int primary key IDENTITY,
+CustomerAltID varchar(50) not null,
+CustomerName varchar(256),
 Gender varchar(20)
 )
 Go
