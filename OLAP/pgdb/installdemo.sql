@@ -81,4 +81,4 @@ ALTER TABLE FactProductSales
 
 \copy Public.DimSalesPerson(SalesPersonAltID, SalesPersonName,StoreID,City,State,Country ) FROM './DimSalesPerson.csv' DELIMITER ',' CSV;
 
-\copy Public.FactProductSales(SalesInvoiceNumber, StoreID,CustomerID,ProductID,SalesPersonID,Quantity,SalesTotalCost,ProductActualCost,Deviation ) FROM './FactProductSales.csv' DELIMITER ',' CSV;
+\copy Public.FactProductSales(SalesInvoiceNumber, StoreID,CustomerID,ProductID,SalesPersonID,Quantity,ProductActualCost,SalesTotalCost,Deviation ) FROM './FactProductSales.csv' DELIMITER ',' CSV;
