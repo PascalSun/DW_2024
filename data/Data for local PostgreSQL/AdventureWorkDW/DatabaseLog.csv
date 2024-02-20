@@ -1,0 +1,2412 @@
+1|2010-09-30 11:12:47.467000000|dbo|CREATE_TABLE|dbo|AdventureWorksDWBuildVersion|CREATE TABLE [dbo].[AdventureWorksDWBuildVersion] (
+    [DBVersion] [nvarchar] (50) NULL,
+    [VersionDate] [datetime] NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.453</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>AdventureWorksDWBuildVersion</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[AdventureWorksDWBuildVersion] (&#x0D;
+    [DBVersion] [nvarchar] (50) NULL,&#x0D;
+    [VersionDate] [datetime] NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+2|2010-09-30 11:12:47.470000000|dbo|CREATE_TABLE|dbo|DimAccount|CREATE TABLE [dbo].[DimAccount] (
+    [AccountKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ParentAccountKey] [int] NULL,
+    [AccountCodeAlternateKey] [int] NULL,
+    [ParentAccountCodeAlternateKey] [int] NULL,
+    [AccountDescription] [nvarchar] (50) NULL,
+    [AccountType] [nvarchar] (50) NULL,
+    [Operator] [nvarchar] (50) NULL,
+    [CustomMembers] [nvarchar] (300) NULL,
+    [ValueType] [nvarchar] (50) NULL,
+    [CustomMemberOptions] [nvarchar] (200) NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.470</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimAccount</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimAccount] (&#x0D;
+    [AccountKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ParentAccountKey] [int] NULL,&#x0D;
+    [AccountCodeAlternateKey] [int] NULL,&#x0D;
+    [ParentAccountCodeAlternateKey] [int] NULL,&#x0D;
+    [AccountDescription] [nvarchar] (50) NULL,&#x0D;
+    [AccountType] [nvarchar] (50) NULL,&#x0D;
+    [Operator] [nvarchar] (50) NULL,&#x0D;
+    [CustomMembers] [nvarchar] (300) NULL,&#x0D;
+    [ValueType] [nvarchar] (50) NULL,&#x0D;
+    [CustomMemberOptions] [nvarchar] (200) NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+17|2010-09-30 11:12:47.540000000|dbo|CREATE_TABLE|dbo|DimScenario|CREATE TABLE [dbo].[DimScenario] (
+    [ScenarioKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ScenarioName] [nvarchar] (50) NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.537</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimScenario</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimScenario] (&#x0D;
+    [ScenarioKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ScenarioName] [nvarchar] (50) NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+56|2010-09-30 11:12:52.743000000|dbo|CREATE_INDEX|dbo|IX_DimEmployee_SalesTerritoryKey|CREATE INDEX [IX_DimEmployee_SalesTerritoryKey] ON [dbo].[DimEmployee]([SalesTerritoryKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.743</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_DimEmployee_SalesTerritoryKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>DimEmployee</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_DimEmployee_SalesTerritoryKey] ON [dbo].[DimEmployee]([SalesTerritoryKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+3|2010-09-30 11:12:47.473000000|dbo|CREATE_TABLE|dbo|DimCurrency|CREATE TABLE [dbo].[DimCurrency] (
+    [CurrencyKey] [int] IDENTITY(1, 1) NOT NULL,
+    [CurrencyAlternateKey] [nchar] (3) NOT NULL,
+    [CurrencyName] [nvarchar] (50) NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.473</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCurrency</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimCurrency] (&#x0D;
+    [CurrencyKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [CurrencyAlternateKey] [nchar] (3) NOT NULL,&#x0D;
+    [CurrencyName] [nvarchar] (50) NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+6|2010-09-30 11:12:47.480000000|dbo|CREATE_TABLE|dbo|DimDepartmentGroup|CREATE TABLE [dbo].[DimDepartmentGroup] (
+    [DepartmentGroupKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ParentDepartmentGroupKey] [int] NULL,
+    [DepartmentGroupName] [nvarchar] (50) NULL 
+) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.480</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimDepartmentGroup</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimDepartmentGroup] (&#x0D;
+    [DepartmentGroupKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ParentDepartmentGroupKey] [int] NULL,&#x0D;
+    [DepartmentGroupName] [nvarchar] (50) NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+8|2010-09-30 11:12:47.497000000|dbo|CREATE_TABLE|dbo|DimGeography|CREATE TABLE [dbo].[DimGeography] (
+    [GeographyKey] [int] IDENTITY(1, 1) NOT NULL,
+    [City] [nvarchar] (30) NULL,
+    [StateProvinceCode] [nvarchar] (3) NULL,
+    [StateProvinceName] [nvarchar] (50) NULL,
+    [CountryRegionCode] [nvarchar] (3) NULL,
+    [EnglishCountryRegionName] [nvarchar] (50) NULL,
+    [SpanishCountryRegionName] [nvarchar] (50) NULL,
+    [FrenchCountryRegionName] [nvarchar] (50) NULL,
+    [PostalCode] [nvarchar] (15) NULL,
+    [SalesTerritoryKey] [int] NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.497</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimGeography</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimGeography] (&#x0D;
+    [GeographyKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [City] [nvarchar] (30) NULL,&#x0D;
+    [StateProvinceCode] [nvarchar] (3) NULL,&#x0D;
+    [StateProvinceName] [nvarchar] (50) NULL,&#x0D;
+    [CountryRegionCode] [nvarchar] (3) NULL,&#x0D;
+    [EnglishCountryRegionName] [nvarchar] (50) NULL,&#x0D;
+    [SpanishCountryRegionName] [nvarchar] (50) NULL,&#x0D;
+    [FrenchCountryRegionName] [nvarchar] (50) NULL,&#x0D;
+    [PostalCode] [nvarchar] (15) NULL,&#x0D;
+    [SalesTerritoryKey] [int] NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+4|2010-09-30 11:12:47.477000000|dbo|CREATE_TABLE|dbo|DimCustomer|CREATE TABLE [dbo].[DimCustomer] (
+    [CustomerKey] [int] IDENTITY(1, 1) NOT NULL,
+    [GeographyKey] [int] NULL,
+    [CustomerAlternateKey] [nvarchar] (15) NOT NULL,
+    [Title] [nvarchar] (8) NULL,
+    [FirstName] [nvarchar] (50) NULL,
+    [MiddleName] [nvarchar] (50) NULL,
+    [LastName] [nvarchar] (50) NULL,
+    [NameStyle] [bit] NULL,
+    [BirthDate] [date] NULL,
+    [MaritalStatus] [nchar] (1) NULL,
+    [Suffix] [nvarchar] (10) NULL,
+    [Gender] [nvarchar] (1) NULL,
+    [EmailAddress] [nvarchar] (50) NULL,
+    [YearlyIncome] [money] NULL,
+    [TotalChildren] [tinyint] NULL,
+    [NumberChildrenAtHome] [tinyint] NULL,
+    [EnglishEducation] [nvarchar] (40) NULL,
+    [SpanishEducation] [nvarchar] (40) NULL,
+    [FrenchEducation] [nvarchar] (40) NULL,
+    [EnglishOccupation] [nvarchar] (100) NULL,
+    [SpanishOccupation] [nvarchar] (100) NULL,
+    [FrenchOccupation] [nvarchar] (100) NULL,
+    [HouseOwnerFlag] [nchar] (1) NULL,
+    [NumberCarsOwned] [tinyint] NULL,
+    [AddressLine1] [nvarchar] (120) NULL,
+    [AddressLine2] [nvarchar] (120) NULL,
+    [Phone] [nvarchar] (20) NULL,
+    [DateFirstPurchase] [date] NULL,
+    [CommuteDistance] [nvarchar] (15) NULL
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.473</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCustomer</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimCustomer] (&#x0D;
+    [CustomerKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [GeographyKey] [int] NULL,&#x0D;
+    [CustomerAlternateKey] [nvarchar] (15) NOT NULL,&#x0D;
+    [Title] [nvarchar] (8) NULL,&#x0D;
+    [FirstName] [nvarchar] (50) NULL,&#x0D;
+    [MiddleName] [nvarchar] (50) NULL,&#x0D;
+    [LastName] [nvarchar] (50) NULL,&#x0D;
+    [NameStyle] [bit] NULL,&#x0D;
+    [BirthDate] [date] NULL,&#x0D;
+    [MaritalStatus] [nchar] (1) NULL,&#x0D;
+    [Suffix] [nvarchar] (10) NULL,&#x0D;
+    [Gender] [nvarchar] (1) NULL,&#x0D;
+    [EmailAddress] [nvarchar] (50) NULL,&#x0D;
+    [YearlyIncome] [money] NULL,&#x0D;
+    [TotalChildren] [tinyint] NULL,&#x0D;
+    [NumberChildrenAtHome] [tinyint] NULL,&#x0D;
+    [EnglishEducation] [nvarchar] (40) NULL,&#x0D;
+    [SpanishEducation] [nvarchar] (40) NULL,&#x0D;
+    [FrenchEducation] [nvarchar] (40) NULL,&#x0D;
+    [EnglishOccupation] [nvarchar] (100) NULL,&#x0D;
+    [SpanishOccupation] [nvarchar] (100) NULL,&#x0D;
+    [FrenchOccupation] [nvarchar] (100) NULL,&#x0D;
+    [HouseOwnerFlag] [nchar] (1) NULL,&#x0D;
+    [NumberCarsOwned] [tinyint] NULL,&#x0D;
+    [AddressLine1] [nvarchar] (120) NULL,&#x0D;
+    [AddressLine2] [nvarchar] (120) NULL,&#x0D;
+    [Phone] [nvarchar] (20) NULL,&#x0D;
+    [DateFirstPurchase] [date] NULL,&#x0D;
+    [CommuteDistance] [nvarchar] (15) NULL&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+68|2010-09-30 11:12:53.030000000|dbo|CREATE_INDEX|dbo|IX_FactInternetSales_CustomerKey|CREATE INDEX [IX_FactInternetSales_CustomerKey] ON [dbo].[FactInternetSales]([CustomerKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.027</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactInternetSales_CustomerKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactInternetSales_CustomerKey] ON [dbo].[FactInternetSales]([CustomerKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+5|2010-09-30 11:12:47.477000000|dbo|CREATE_TABLE|dbo|DimDate|CREATE TABLE [dbo].[DimDate] (
+    [DateKey] int NOT NULL,
+    [FullDateAlternateKey] [date] NOT NULL,
+    [DayNumberOfWeek] [tinyint] NOT NULL,
+    [EnglishDayNameOfWeek] [nvarchar] (10) NOT NULL,
+    [SpanishDayNameOfWeek] [nvarchar] (10) NOT NULL,
+    [FrenchDayNameOfWeek] [nvarchar] (10) NOT NULL,
+    [DayNumberOfMonth] [tinyint] NOT NULL,
+    [DayNumberOfYear] [smallint] NOT NULL,
+    [WeekNumberOfYear] [tinyint] NOT NULL,
+    [EnglishMonthName] [nvarchar] (10) NOT NULL,
+    [SpanishMonthName] [nvarchar] (10) NOT NULL,
+    [FrenchMonthName] [nvarchar] (10) NOT NULL,
+    [MonthNumberOfYear] [tinyint] NOT NULL,
+    [CalendarQuarter] [tinyint] NOT NULL,
+    [CalendarYear] [smallint] NOT NULL,
+    [CalendarSemester] [tinyint] NOT NULL,
+    [FiscalQuarter] [tinyint] NOT NULL,
+    [FiscalYear] [smallint] NOT NULL,
+    [FiscalSemester] [tinyint] NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.477</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimDate</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimDate] (&#x0D;
+    [DateKey] int NOT NULL,&#x0D;
+    [FullDateAlternateKey] [date] NOT NULL,&#x0D;
+    [DayNumberOfWeek] [tinyint] NOT NULL,&#x0D;
+    [EnglishDayNameOfWeek] [nvarchar] (10) NOT NULL,&#x0D;
+    [SpanishDayNameOfWeek] [nvarchar] (10) NOT NULL,&#x0D;
+    [FrenchDayNameOfWeek] [nvarchar] (10) NOT NULL,&#x0D;
+    [DayNumberOfMonth] [tinyint] NOT NULL,&#x0D;
+    [DayNumberOfYear] [smallint] NOT NULL,&#x0D;
+    [WeekNumberOfYear] [tinyint] NOT NULL,&#x0D;
+    [EnglishMonthName] [nvarchar] (10) NOT NULL,&#x0D;
+    [SpanishMonthName] [nvarchar] (10) NOT NULL,&#x0D;
+    [FrenchMonthName] [nvarchar] (10) NOT NULL,&#x0D;
+    [MonthNumberOfYear] [tinyint] NOT NULL,&#x0D;
+    [CalendarQuarter] [tinyint] NOT NULL,&#x0D;
+    [CalendarYear] [smallint] NOT NULL,&#x0D;
+    [CalendarSemester] [tinyint] NOT NULL,&#x0D;
+    [FiscalQuarter] [tinyint] NOT NULL,&#x0D;
+    [FiscalYear] [smallint] NOT NULL,&#x0D;
+    [FiscalSemester] [tinyint] NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+70|2010-09-30 11:12:53.223000000|dbo|CREATE_INDEX|dbo|IX_FactInternetSales_OrderDateKey|CREATE INDEX [IX_FactInternetSales_OrderDateKey] ON [dbo].[FactInternetSales]([OrderDateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.223</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactInternetSales_OrderDateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactInternetSales_OrderDateKey] ON [dbo].[FactInternetSales]([OrderDateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+72|2010-09-30 11:12:53.623000000|dbo|CREATE_INDEX|dbo|IX_FactInternetSales_PromotionKey|CREATE INDEX [IX_FactInternetSales_PromotionKey] ON [dbo].[FactInternetSales]([PromotionKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.623</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactInternetSales_PromotionKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactInternetSales_PromotionKey] ON [dbo].[FactInternetSales]([PromotionKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+7|2010-09-30 11:12:47.493000000|dbo|CREATE_TABLE|dbo|DimEmployee|CREATE TABLE [dbo].[DimEmployee] (
+    [EmployeeKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ParentEmployeeKey] [int] NULL,
+    [EmployeeNationalIDAlternateKey] [nvarchar] (15) NULL,
+    [ParentEmployeeNationalIDAlternateKey] [nvarchar] (15) NULL,
+    [SalesTerritoryKey] [int] NULL,
+    [FirstName] [nvarchar] (50) NOT NULL,
+    [LastName] [nvarchar] (50) NOT NULL,
+    [MiddleName] [nvarchar] (50) NULL,
+    [NameStyle] [bit] NOT NULL,
+    [Title] [nvarchar] (50) NULL,
+    [HireDate] [date] NULL,
+    [BirthDate] [date] NULL,
+    [LoginID] [nvarchar] (256) NULL,
+    [EmailAddress] [nvarchar] (50) NULL,
+    [Phone] [nvarchar] (25) NULL,
+    [MaritalStatus] [nchar] (1) NULL,
+    [EmergencyContactName] [nvarchar] (50) NULL,
+    [EmergencyContactPhone] [nvarchar] (25) NULL,
+    [SalariedFlag] [bit] NULL,
+    [Gender] [nchar] (1) NULL,
+    [PayFrequency] [tinyint] NULL,
+    [BaseRate] [money] NULL,
+    [VacationHours] [smallint] NULL,
+    [SickLeaveHours] [smallint] NULL,
+    [CurrentFlag] [bit] NOT NULL,
+    [SalesPersonFlag] [bit] NOT NULL,
+    [DepartmentName] [nvarchar] (50) NULL,
+    [StartDate] [date] NULL,
+    [EndDate] [date] NULL,
+    [Status] [nvarchar] (50)
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.493</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimEmployee</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimEmployee] (&#x0D;
+    [EmployeeKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ParentEmployeeKey] [int] NULL,&#x0D;
+    [EmployeeNationalIDAlternateKey] [nvarchar] (15) NULL,&#x0D;
+    [ParentEmployeeNationalIDAlternateKey] [nvarchar] (15) NULL,&#x0D;
+    [SalesTerritoryKey] [int] NULL,&#x0D;
+    [FirstName] [nvarchar] (50) NOT NULL,&#x0D;
+    [LastName] [nvarchar] (50) NOT NULL,&#x0D;
+    [MiddleName] [nvarchar] (50) NULL,&#x0D;
+    [NameStyle] [bit] NOT NULL,&#x0D;
+    [Title] [nvarchar] (50) NULL,&#x0D;
+    [HireDate] [date] NULL,&#x0D;
+    [BirthDate] [date] NULL,&#x0D;
+    [LoginID] [nvarchar] (256) NULL,&#x0D;
+    [EmailAddress] [nvarchar] (50) NULL,&#x0D;
+    [Phone] [nvarchar] (25) NULL,&#x0D;
+    [MaritalStatus] [nchar] (1) NULL,&#x0D;
+    [EmergencyContactName] [nvarchar] (50) NULL,&#x0D;
+    [EmergencyContactPhone] [nvarchar] (25) NULL,&#x0D;
+    [SalariedFlag] [bit] NULL,&#x0D;
+    [Gender] [nchar] (1) NULL,&#x0D;
+    [PayFrequency] [tinyint] NULL,&#x0D;
+    [BaseRate] [money] NULL,&#x0D;
+    [VacationHours] [smallint] NULL,&#x0D;
+    [SickLeaveHours] [smallint] NULL,&#x0D;
+    [CurrentFlag] [bit] NOT NULL,&#x0D;
+    [SalesPersonFlag] [bit] NOT NULL,&#x0D;
+    [DepartmentName] [nvarchar] (50) NULL,&#x0D;
+    [StartDate] [date] NULL,&#x0D;
+    [EndDate] [date] NULL,&#x0D;
+    [Status] [nvarchar] (50)&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+78|2010-09-30 11:12:54.727000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_PromotionKey|CREATE INDEX [IX_FactResellerSales_PromotionKey] ON [dbo].[FactResellerSales]([PromotionKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:54.727</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_PromotionKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_PromotionKey] ON [dbo].[FactResellerSales]([PromotionKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+9|2010-09-30 11:12:47.497000000|dbo|CREATE_TABLE|dbo|DimOrganization|CREATE TABLE [dbo].[DimOrganization] (
+    [OrganizationKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ParentOrganizationKey] [int] NULL,
+    [PercentageOfOwnership] [nvarchar] (16) NULL,
+    [OrganizationName] [nvarchar] (50) NULL,
+    [CurrencyKey] [int]  NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.497</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimOrganization</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimOrganization] (&#x0D;
+    [OrganizationKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ParentOrganizationKey] [int] NULL,&#x0D;
+    [PercentageOfOwnership] [nvarchar] (16) NULL,&#x0D;
+    [OrganizationName] [nvarchar] (50) NULL,&#x0D;
+    [CurrencyKey] [int]  NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+11|2010-09-30 11:12:47.527000000|dbo|CREATE_TABLE|dbo|DimProductCategory|CREATE TABLE [dbo].[DimProductCategory] (
+    [ProductCategoryKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ProductCategoryAlternateKey] [int] NULL,
+    [EnglishProductCategoryName] [nvarchar] (50) NOT NULL, 
+    [SpanishProductCategoryName] [nvarchar] (50) NOT NULL,
+    [FrenchProductCategoryName] [nvarchar] (50) NOT NULL
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.527</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductCategory</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimProductCategory] (&#x0D;
+    [ProductCategoryKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ProductCategoryAlternateKey] [int] NULL,&#x0D;
+    [EnglishProductCategoryName] [nvarchar] (50) NOT NULL, &#x0D;
+    [SpanishProductCategoryName] [nvarchar] (50) NOT NULL,&#x0D;
+    [FrenchProductCategoryName] [nvarchar] (50) NOT NULL&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+80|2010-09-30 11:12:55.477000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_EmployeeKey|CREATE INDEX [IX_FactResellerSales_EmployeeKey] ON [dbo].[FactResellerSales]([EmployeeKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.477</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_EmployeeKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_EmployeeKey] ON [dbo].[FactResellerSales]([EmployeeKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+83|2010-09-30 11:12:55.630000000|dbo|CREATE_INDEX|dbo|IX_FactSalesQuota_DateKey|CREATE INDEX [IX_FactSalesQuota_DateKey] ON [dbo].[FactSalesQuota]([DateKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.630</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactSalesQuota_DateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactSalesQuota</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactSalesQuota_DateKey] ON [dbo].[FactSalesQuota]([DateKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+10|2010-09-30 11:12:47.523000000|dbo|CREATE_TABLE|dbo|DimProduct|CREATE TABLE [dbo].[DimProduct] (
+    [ProductKey] [int] IDENTITY(1,1) NOT NULL,
+    [ProductAlternateKey] [nvarchar] (25) NULL,
+    [ProductSubcategoryKey] [int] NULL,
+    [WeightUnitMeasureCode] [nchar] (3) NULL,
+    [SizeUnitMeasureCode] [nchar] (3) NULL,
+    [EnglishProductName] [nvarchar] (50) NOT NULL,
+    [SpanishProductName] [nvarchar] (50) NOT NULL,
+    [FrenchProductName] [nvarchar] (50) NOT NULL,
+    [StandardCost] [money] NULL,
+    [FinishedGoodsFlag] [bit] NOT NULL,
+    [Color] [nvarchar] (15) NOT NULL,
+    [SafetyStockLevel] [smallint] NULL,
+    [ReorderPoint] [smallint] NULL,
+    [ListPrice] [money] NULL,
+    [Size] [nvarchar] (50) NULL,
+    [SizeRange] [nvarchar] (50) NULL,
+    [Weight] [float] NULL,
+    [DaysToManufacture] [int] NULL,
+    [ProductLine] [nchar] (2) NULL,
+    [DealerPrice] [money] NULL,
+    [Class] [nchar] (2) NULL,
+    [Style] [nchar] (2) NULL,
+    [ModelName] [nvarchar] (50) NULL,
+    [LargePhoto] [varbinary] (max) NULL,
+    [EnglishDescription] [nvarchar] (400) NULL,
+    [FrenchDescription] [nvarchar] (400) COLLATE French_CI_AS NULL, 
+    [ChineseDescription] [nvarchar] (400) COLLATE Chinese_PRC_CI_AI NULL, 
+    [ArabicDescription] [nvarchar] (400) COLLATE Arabic_CI_AS NULL, 
+    [HebrewDescription] [nvarchar] (400) COLLATE Hebrew_CI_AS NULL, 
+    [ThaiDescription] [nvarchar] (400) COLLATE Thai_CI_AS NULL, 
+    [GermanDescription] [nvarchar] (400) COLLATE Latin1_General_100_CI_AS NULL,
+    [JapaneseDescription] [nvarchar] (400) COLLATE Japanese_CI_AS NULL,
+    [TurkishDescription] [nvarchar] (400) COLLATE Turkish_CI_AS NULL,
+    [StartDate] [datetime] NULL,
+    [EndDate] [datetime] NULL,
+    [Status] [nvarchar] (7) NULL
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.523</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProduct</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimProduct] (&#x0D;
+    [ProductKey] [int] IDENTITY(1,1) NOT NULL,&#x0D;
+    [ProductAlternateKey] [nvarchar] (25) NULL,&#x0D;
+    [ProductSubcategoryKey] [int] NULL,&#x0D;
+    [WeightUnitMeasureCode] [nchar] (3) NULL,&#x0D;
+    [SizeUnitMeasureCode] [nchar] (3) NULL,&#x0D;
+    [EnglishProductName] [nvarchar] (50) NOT NULL,&#x0D;
+    [SpanishProductName] [nvarchar] (50) NOT NULL,&#x0D;
+    [FrenchProductName] [nvarchar] (50) NOT NULL,&#x0D;
+    [StandardCost] [money] NULL,&#x0D;
+    [FinishedGoodsFlag] [bit] NOT NULL,&#x0D;
+    [Color] [nvarchar] (15) NOT NULL,&#x0D;
+    [SafetyStockLevel] [smallint] NULL,&#x0D;
+    [ReorderPoint] [smallint] NULL,&#x0D;
+    [ListPrice] [money] NULL,&#x0D;
+    [Size] [nvarchar] (50) NULL,&#x0D;
+    [SizeRange] [nvarchar] (50) NULL,&#x0D;
+    [Weight] [float] NULL,&#x0D;
+    [DaysToManufacture] [int] NULL,&#x0D;
+    [ProductLine] [nchar] (2) NULL,&#x0D;
+    [DealerPrice] [money] NULL,&#x0D;
+    [Class] [nchar] (2) NULL,&#x0D;
+    [Style] [nchar] (2) NULL,&#x0D;
+    [ModelName] [nvarchar] (50) NULL,&#x0D;
+    [LargePhoto] [varbinary] (max) NULL,&#x0D;
+    [EnglishDescription] [nvarchar] (400) NULL,&#x0D;
+    [FrenchDescription] [nvarchar] (400) COLLATE French_CI_AS NULL, &#x0D;
+    [ChineseDescription] [nvarchar] (400) COLLATE Chinese_PRC_CI_AI NULL, &#x0D;
+    [ArabicDescription] [nvarchar] (400) COLLATE Arabic_CI_AS NULL, &#x0D;
+    [HebrewDescription] [nvarchar] (400) COLLATE Hebrew_CI_AS NULL, &#x0D;
+    [ThaiDescription] [nvarchar] (400) COLLATE Thai_CI_AS NULL, &#x0D;
+    [GermanDescription] [nvarchar] (400) COLLATE Latin1_General_100_CI_AS NULL,&#x0D;
+    [JapaneseDescription] [nvarchar] (400) COLLATE Japanese_CI_AS NULL,&#x0D;
+    [TurkishDescription] [nvarchar] (400) COLLATE Turkish_CI_AS NULL,&#x0D;
+    [StartDate] [datetime] NULL,&#x0D;
+    [EndDate] [datetime] NULL,&#x0D;
+    [Status] [nvarchar] (7) NULL&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+12|2010-09-30 11:12:47.530000000|dbo|CREATE_TABLE|dbo|DimProductSubcategory|CREATE TABLE [dbo].[DimProductSubcategory] (
+    [ProductSubcategoryKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ProductSubcategoryAlternateKey] [int] NULL,
+    [EnglishProductSubcategoryName] [nvarchar] (50) NOT NULL,
+    [SpanishProductSubcategoryName] [nvarchar] (50) NOT NULL,
+    [FrenchProductSubcategoryName] [nvarchar] (50) NOT NULL,
+    [ProductCategoryKey] [int] NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.527</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductSubcategory</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimProductSubcategory] (&#x0D;
+    [ProductSubcategoryKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ProductSubcategoryAlternateKey] [int] NULL,&#x0D;
+    [EnglishProductSubcategoryName] [nvarchar] (50) NOT NULL,&#x0D;
+    [SpanishProductSubcategoryName] [nvarchar] (50) NOT NULL,&#x0D;
+    [FrenchProductSubcategoryName] [nvarchar] (50) NOT NULL,&#x0D;
+    [ProductCategoryKey] [int] NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+13|2010-09-30 11:12:47.530000000|dbo|CREATE_TABLE|dbo|DimPromotion|CREATE TABLE [dbo].[DimPromotion] (
+    [PromotionKey] [int] IDENTITY(1, 1) NOT NULL,
+    [PromotionAlternateKey] [int] NULL,
+    [EnglishPromotionName] [nvarchar] (255) NULL,
+    [SpanishPromotionName] [nvarchar] (255) NULL,
+    [FrenchPromotionName] [nvarchar] (255) NULL,
+    [DiscountPct] [float] NULL,
+    [EnglishPromotionType] [nvarchar] (50) NULL,
+    [SpanishPromotionType] [nvarchar] (50) NULL,
+    [FrenchPromotionType] [nvarchar] (50) NULL,
+    [EnglishPromotionCategory] [nvarchar] (50) NULL,
+    [SpanishPromotionCategory] [nvarchar] (50) NULL,
+    [FrenchPromotionCategory] [nvarchar] (50) NULL,
+    [StartDate] [datetime] NOT NULL,
+    [EndDate] [datetime] NULL,
+    [MinQty] [int] NULL,
+    [MaxQty] [int] NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.530</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimPromotion</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimPromotion] (&#x0D;
+    [PromotionKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [PromotionAlternateKey] [int] NULL,&#x0D;
+    [EnglishPromotionName] [nvarchar] (255) NULL,&#x0D;
+    [SpanishPromotionName] [nvarchar] (255) NULL,&#x0D;
+    [FrenchPromotionName] [nvarchar] (255) NULL,&#x0D;
+    [DiscountPct] [float] NULL,&#x0D;
+    [EnglishPromotionType] [nvarchar] (50) NULL,&#x0D;
+    [SpanishPromotionType] [nvarchar] (50) NULL,&#x0D;
+    [FrenchPromotionType] [nvarchar] (50) NULL,&#x0D;
+    [EnglishPromotionCategory] [nvarchar] (50) NULL,&#x0D;
+    [SpanishPromotionCategory] [nvarchar] (50) NULL,&#x0D;
+    [FrenchPromotionCategory] [nvarchar] (50) NULL,&#x0D;
+    [StartDate] [datetime] NOT NULL,&#x0D;
+    [EndDate] [datetime] NULL,&#x0D;
+    [MinQty] [int] NULL,&#x0D;
+    [MaxQty] [int] NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+14|2010-09-30 11:12:47.533000000|dbo|CREATE_TABLE|dbo|DimReseller|CREATE TABLE [dbo].[DimReseller] (
+    [ResellerKey] [int] IDENTITY(1, 1) NOT NULL,
+    [GeographyKey] [int] NULL,
+    [ResellerAlternateKey] [nvarchar] (15) NULL,
+    [Phone] [nvarchar] (25) NULL,
+    [BusinessType] [varchar] (20) NOT NULL,
+    [ResellerName] [nvarchar] (50) NOT NULL,
+    [NumberEmployees] [int] NULL,
+    [OrderFrequency] [char] (1) NULL,
+    [OrderMonth] [tinyint] NULL,
+    [FirstOrderYear] [int] NULL,
+    [LastOrderYear] [int] NULL,
+    [ProductLine] [nvarchar] (50) NULL,
+    [AddressLine1] [nvarchar] (60) NULL,
+    [AddressLine2] [nvarchar] (60) NULL,
+    [AnnualSales] [money] NULL,
+    [BankName] [nvarchar] (50) NULL,
+    [MinPaymentType] [tinyint] NULL,
+    [MinPaymentAmount] [money] NULL,
+    [AnnualRevenue] [money] NULL,
+    [YearOpened] [int] NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.533</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimReseller</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimReseller] (&#x0D;
+    [ResellerKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [GeographyKey] [int] NULL,&#x0D;
+    [ResellerAlternateKey] [nvarchar] (15) NULL,&#x0D;
+    [Phone] [nvarchar] (25) NULL,&#x0D;
+    [BusinessType] [varchar] (20) NOT NULL,&#x0D;
+    [ResellerName] [nvarchar] (50) NOT NULL,&#x0D;
+    [NumberEmployees] [int] NULL,&#x0D;
+    [OrderFrequency] [char] (1) NULL,&#x0D;
+    [OrderMonth] [tinyint] NULL,&#x0D;
+    [FirstOrderYear] [int] NULL,&#x0D;
+    [LastOrderYear] [int] NULL,&#x0D;
+    [ProductLine] [nvarchar] (50) NULL,&#x0D;
+    [AddressLine1] [nvarchar] (60) NULL,&#x0D;
+    [AddressLine2] [nvarchar] (60) NULL,&#x0D;
+    [AnnualSales] [money] NULL,&#x0D;
+    [BankName] [nvarchar] (50) NULL,&#x0D;
+    [MinPaymentType] [tinyint] NULL,&#x0D;
+    [MinPaymentAmount] [money] NULL,&#x0D;
+    [AnnualRevenue] [money] NULL,&#x0D;
+    [YearOpened] [int] NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+85|2010-09-30 11:12:55.643000000|dbo|CREATE_INDEX|dbo|IX_FactSurveyResponse_CustomerKey|CREATE INDEX [IX_FactSurveyResponse_CustomerKey] ON [dbo].[FactSurveyResponse] ([CustomerKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.643</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactSurveyResponse_CustomerKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactSurveyResponse</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactSurveyResponse_CustomerKey] ON [dbo].[FactSurveyResponse] ([CustomerKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+15|2010-09-30 11:12:47.533000000|dbo|CREATE_TABLE|dbo|DimSalesReason|CREATE TABLE [dbo].[DimSalesReason] (
+    [SalesReasonKey] [int] IDENTITY(1, 1) NOT NULL,
+    [SalesReasonAlternateKey] [int] NOT NULL,
+    [SalesReasonName] [nvarchar] (50) NOT NULL,
+    [SalesReasonReasonType] [nvarchar] (50) NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.533</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimSalesReason</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimSalesReason] (&#x0D;
+    [SalesReasonKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [SalesReasonAlternateKey] [int] NOT NULL,&#x0D;
+    [SalesReasonName] [nvarchar] (50) NOT NULL,&#x0D;
+    [SalesReasonReasonType] [nvarchar] (50) NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+16|2010-09-30 11:12:47.537000000|dbo|CREATE_TABLE|dbo|DimSalesTerritory|CREATE TABLE [dbo].[DimSalesTerritory] (
+    [SalesTerritoryKey] [int] IDENTITY(1, 1) NOT NULL,
+    [SalesTerritoryAlternateKey] [int] NULL,
+    [SalesTerritoryRegion] [nvarchar] (50) NOT NULL,
+    [SalesTerritoryCountry] [nvarchar] (50) NOT NULL,
+    [SalesTerritoryGroup] [nvarchar] (50) NULL
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.537</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimSalesTerritory</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[DimSalesTerritory] (&#x0D;
+    [SalesTerritoryKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [SalesTerritoryAlternateKey] [int] NULL,&#x0D;
+    [SalesTerritoryRegion] [nvarchar] (50) NOT NULL,&#x0D;
+    [SalesTerritoryCountry] [nvarchar] (50) NOT NULL,&#x0D;
+    [SalesTerritoryGroup] [nvarchar] (50) NULL&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+18|2010-09-30 11:12:47.540000000|dbo|CREATE_TABLE|dbo|FactCallCenter|CREATE TABLE [dbo].[FactCallCenter] (
+    [FactCallCenterID] [int] IDENTITY(1,1) NOT NULL,
+	[DateKey] [int] NOT NULL,
+	[WageType] [nvarchar](15) NOT NULL,
+	[Shift] [nvarchar](20) NOT NULL,
+	[LevelOneOperators] [smallint] NOT NULL,
+	[LevelTwoOperators] [smallint] NOT NULL,
+	[TotalOperators] [smallint] NOT NULL,
+	[Calls] [int] NOT NULL,
+	[AutomaticResponses] [int] NOT NULL,
+	[Orders] [int] NOT NULL,
+	[IssuesRaised] [smallint] NOT NULL,
+	[AverageTimePerIssue] [smallint] NOT NULL,
+	[ServiceGrade] [float] NOT NULL
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.540</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCallCenter</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactCallCenter] (&#x0D;
+    [FactCallCenterID] [int] IDENTITY(1,1) NOT NULL,&#x0D;
+	[DateKey] [int] NOT NULL,&#x0D;
+	[WageType] [nvarchar](15) NOT NULL,&#x0D;
+	[Shift] [nvarchar](20) NOT NULL,&#x0D;
+	[LevelOneOperators] [smallint] NOT NULL,&#x0D;
+	[LevelTwoOperators] [smallint] NOT NULL,&#x0D;
+	[TotalOperators] [smallint] NOT NULL,&#x0D;
+	[Calls] [int] NOT NULL,&#x0D;
+	[AutomaticResponses] [int] NOT NULL,&#x0D;
+	[Orders] [int] NOT NULL,&#x0D;
+	[IssuesRaised] [smallint] NOT NULL,&#x0D;
+	[AverageTimePerIssue] [smallint] NOT NULL,&#x0D;
+	[ServiceGrade] [float] NOT NULL&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+19|2010-09-30 11:12:47.540000000|dbo|CREATE_TABLE|dbo|FactCurrencyRate|CREATE TABLE [dbo].[FactCurrencyRate] (
+    [CurrencyKey] [int] NOT NULL,
+    [DateKey] [int] NOT NULL,
+    [AverageRate] [float] NOT NULL,
+    [EndOfDayRate] [float] NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.540</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCurrencyRate</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactCurrencyRate] (&#x0D;
+    [CurrencyKey] [int] NOT NULL,&#x0D;
+    [DateKey] [int] NOT NULL,&#x0D;
+    [AverageRate] [float] NOT NULL,&#x0D;
+    [EndOfDayRate] [float] NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+20|2010-09-30 11:12:47.543000000|dbo|CREATE_TABLE|dbo|FactFinance|CREATE TABLE [dbo].[FactFinance] (
+	[FinanceKey] [int] IDENTITY(1, 1) NOT NULL,
+    [DateKey] [int] NOT NULL,
+    [OrganizationKey] [int] NOT NULL,
+    [DepartmentGroupKey] [int] NOT NULL,
+    [ScenarioKey] [int] NOT NULL,
+    [AccountKey] [int] NOT NULL,
+    [Amount] [float] NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.543</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactFinance</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactFinance] (&#x0D;
+	[FinanceKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [DateKey] [int] NOT NULL,&#x0D;
+    [OrganizationKey] [int] NOT NULL,&#x0D;
+    [DepartmentGroupKey] [int] NOT NULL,&#x0D;
+    [ScenarioKey] [int] NOT NULL,&#x0D;
+    [AccountKey] [int] NOT NULL,&#x0D;
+    [Amount] [float] NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+21|2010-09-30 11:12:47.547000000|dbo|CREATE_TABLE|dbo|FactInternetSales|CREATE TABLE [dbo].[FactInternetSales] (
+    [ProductKey] [int] NOT NULL,
+    [OrderDateKey] [int] NOT NULL,
+    [DueDateKey] [int] NOT NULL,
+    [ShipDateKey] [int] NOT NULL,
+    [CustomerKey] [int] NOT NULL,
+    [PromotionKey] [int] NOT NULL,
+    [CurrencyKey] [int] NOT NULL,
+    [SalesTerritoryKey] [int] NOT NULL,
+    [SalesOrderNumber] [nvarchar] (20) NOT NULL,
+    [SalesOrderLineNumber] [tinyint] NOT NULL,
+    [RevisionNumber] [tinyint] NOT NULL,
+    [OrderQuantity] [smallint] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [ExtendedAmount] [money] NOT NULL,
+    [UnitPriceDiscountPct] [float] NOT NULL,
+    [DiscountAmount] [float] NOT NULL,
+    [ProductStandardCost] [money] NOT NULL,
+    [TotalProductCost] [money] NOT NULL,
+    [SalesAmount] [money] NOT NULL,
+    [TaxAmt] [money] NOT NULL,
+    [Freight] [money] NOT NULL,
+    [CarrierTrackingNumber] [nvarchar] (25) NULL,
+    [CustomerPONumber] [nvarchar] (25) NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.547</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactInternetSales</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactInternetSales] (&#x0D;
+    [ProductKey] [int] NOT NULL,&#x0D;
+    [OrderDateKey] [int] NOT NULL,&#x0D;
+    [DueDateKey] [int] NOT NULL,&#x0D;
+    [ShipDateKey] [int] NOT NULL,&#x0D;
+    [CustomerKey] [int] NOT NULL,&#x0D;
+    [PromotionKey] [int] NOT NULL,&#x0D;
+    [CurrencyKey] [int] NOT NULL,&#x0D;
+    [SalesTerritoryKey] [int] NOT NULL,&#x0D;
+    [SalesOrderNumber] [nvarchar] (20) NOT NULL,&#x0D;
+    [SalesOrderLineNumber] [tinyint] NOT NULL,&#x0D;
+    [RevisionNumber] [tinyint] NOT NULL,&#x0D;
+    [OrderQuantity] [smallint] NOT NULL,&#x0D;
+    [UnitPrice] [money] NOT NULL,&#x0D;
+    [ExtendedAmount] [money] NOT NULL,&#x0D;
+    [UnitPriceDiscountPct] [float] NOT NULL,&#x0D;
+    [DiscountAmount] [float] NOT NULL,&#x0D;
+    [ProductStandardCost] [money] NOT NULL,&#x0D;
+    [TotalProductCost] [money] NOT NULL,&#x0D;
+    [SalesAmount] [money] NOT NULL,&#x0D;
+    [TaxAmt] [money] NOT NULL,&#x0D;
+    [Freight] [money] NOT NULL,&#x0D;
+    [CarrierTrackingNumber] [nvarchar] (25) NULL,&#x0D;
+    [CustomerPONumber] [nvarchar] (25) NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+22|2010-09-30 11:12:47.550000000|dbo|CREATE_TABLE|dbo|FactResellerSales|CREATE TABLE [dbo].[FactResellerSales] (
+    [ProductKey] [int] NOT NULL,
+    [OrderDateKey] [int] NOT NULL,
+    [DueDateKey] [int] NOT NULL,
+    [ShipDateKey] [int] NOT NULL,
+    [ResellerKey] [int] NOT NULL,
+    [EmployeeKey] [int] NOT NULL,
+    [PromotionKey] [int] NOT NULL,
+    [CurrencyKey] [int] NOT NULL,
+    [SalesTerritoryKey] [int] NOT NULL,
+    [SalesOrderNumber] [nvarchar] (20) NOT NULL,
+    [SalesOrderLineNumber] [tinyint] NOT NULL,
+    [RevisionNumber] [tinyint] NULL,
+    [OrderQuantity] [smallint] NULL,
+    [UnitPrice] [money] NULL,
+    [ExtendedAmount] [money] NULL,
+    [UnitPriceDiscountPct] [float] NULL,
+    [DiscountAmount] [float] NULL,
+    [ProductStandardCost] [money] NULL,
+    [TotalProductCost] [money] NULL,
+    [SalesAmount] [money] NULL,
+    [TaxAmt] [money] NULL,
+    [Freight] [money] NULL,
+    [CarrierTrackingNumber] [nvarchar] (25) NULL,
+    [CustomerPONumber] [nvarchar] (25) NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.547</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactResellerSales</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactResellerSales] (&#x0D;
+    [ProductKey] [int] NOT NULL,&#x0D;
+    [OrderDateKey] [int] NOT NULL,&#x0D;
+    [DueDateKey] [int] NOT NULL,&#x0D;
+    [ShipDateKey] [int] NOT NULL,&#x0D;
+    [ResellerKey] [int] NOT NULL,&#x0D;
+    [EmployeeKey] [int] NOT NULL,&#x0D;
+    [PromotionKey] [int] NOT NULL,&#x0D;
+    [CurrencyKey] [int] NOT NULL,&#x0D;
+    [SalesTerritoryKey] [int] NOT NULL,&#x0D;
+    [SalesOrderNumber] [nvarchar] (20) NOT NULL,&#x0D;
+    [SalesOrderLineNumber] [tinyint] NOT NULL,&#x0D;
+    [RevisionNumber] [tinyint] NULL,&#x0D;
+    [OrderQuantity] [smallint] NULL,&#x0D;
+    [UnitPrice] [money] NULL,&#x0D;
+    [ExtendedAmount] [money] NULL,&#x0D;
+    [UnitPriceDiscountPct] [float] NULL,&#x0D;
+    [DiscountAmount] [float] NULL,&#x0D;
+    [ProductStandardCost] [money] NULL,&#x0D;
+    [TotalProductCost] [money] NULL,&#x0D;
+    [SalesAmount] [money] NULL,&#x0D;
+    [TaxAmt] [money] NULL,&#x0D;
+    [Freight] [money] NULL,&#x0D;
+    [CarrierTrackingNumber] [nvarchar] (25) NULL,&#x0D;
+    [CustomerPONumber] [nvarchar] (25) NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+23|2010-09-30 11:12:47.550000000|dbo|CREATE_TABLE|dbo|FactInternetSalesReason|CREATE TABLE [dbo].[FactInternetSalesReason] (
+    [SalesOrderNumber] [nvarchar] (20) NOT NULL,
+    [SalesOrderLineNumber] [tinyint] NOT NULL,
+    [SalesReasonKey] [int] NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.550</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactInternetSalesReason</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactInternetSalesReason] (&#x0D;
+    [SalesOrderNumber] [nvarchar] (20) NOT NULL,&#x0D;
+    [SalesOrderLineNumber] [tinyint] NOT NULL,&#x0D;
+    [SalesReasonKey] [int] NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+24|2010-09-30 11:12:47.550000000|dbo|CREATE_TABLE|dbo|FactSalesQuota|CREATE TABLE [dbo].[FactSalesQuota] (
+	[SalesQuotaKey] [int] IDENTITY(1, 1) NOT NULL,
+    [EmployeeKey] [int] NOT NULL,
+    [DateKey] [int] NOT NULL,
+    [CalendarYear] [smallint] NOT NULL,
+    [CalendarQuarter] [tinyint] NOT NULL,
+    [SalesAmountQuota] [money] NOT NULL 
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.550</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactSalesQuota</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactSalesQuota] (&#x0D;
+	[SalesQuotaKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [EmployeeKey] [int] NOT NULL,&#x0D;
+    [DateKey] [int] NOT NULL,&#x0D;
+    [CalendarYear] [smallint] NOT NULL,&#x0D;
+    [CalendarQuarter] [tinyint] NOT NULL,&#x0D;
+    [SalesAmountQuota] [money] NOT NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+25|2010-09-30 11:12:47.553000000|dbo|CREATE_TABLE|dbo|FactSurveyResponse|CREATE TABLE [dbo].[FactSurveyResponse] (
+	[SurveyResponseKey] [int] IDENTITY(1, 1) NOT NULL,
+	[DateKey] [int] NOT NULL,
+	[CustomerKey] [int] NOT NULL,
+	[ProductCategoryKey] [int] NOT NULL,
+	[EnglishProductCategoryName] [nvarchar] (50) NOT NULL,
+	[ProductSubcategoryKey] [int] NOT NULL,
+    [EnglishProductSubcategoryName] [nvarchar] (50) NOT NULL,
+) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.553</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactSurveyResponse</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[FactSurveyResponse] (&#x0D;
+	[SurveyResponseKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+	[DateKey] [int] NOT NULL,&#x0D;
+	[CustomerKey] [int] NOT NULL,&#x0D;
+	[ProductCategoryKey] [int] NOT NULL,&#x0D;
+	[EnglishProductCategoryName] [nvarchar] (50) NOT NULL,&#x0D;
+	[ProductSubcategoryKey] [int] NOT NULL,&#x0D;
+    [EnglishProductSubcategoryName] [nvarchar] (50) NOT NULL,&#x0D;
+) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+26|2010-09-30 11:12:47.557000000|dbo|CREATE_TABLE|dbo|ProspectiveBuyer|CREATE TABLE [dbo].[ProspectiveBuyer] (
+	[ProspectiveBuyerKey] [int] IDENTITY(1, 1) NOT NULL,
+    [ProspectAlternateKey] [nvarchar] (15) NULL,
+    [FirstName] [nvarchar] (50) NULL,
+    [MiddleName] [nvarchar] (50) NULL,
+    [LastName] [nvarchar] (50) NULL,
+    [BirthDate] [datetime] NULL,
+    [MaritalStatus] [nchar] (1) NULL,
+    [Gender] [nvarchar] (1) NULL,
+    [EmailAddress] [nvarchar] (50) NULL,
+    [YearlyIncome] [money] NULL,
+    [TotalChildren] [tinyint] NULL,
+    [NumberChildrenAtHome] [tinyint] NULL,
+    [Education] [nvarchar] (40) NULL,
+    [Occupation] [nvarchar] (100) NULL,
+    [HouseOwnerFlag] [nchar] (1) NULL,
+    [NumberCarsOwned] [tinyint] NULL,
+    [AddressLine1] [nvarchar] (120) NULL,
+    [AddressLine2] [nvarchar] (120) NULL,
+    [City] [nvarchar](30) NULL, 
+    [StateProvinceCode] [nvarchar] (3) NULL,
+    [PostalCode] [nvarchar](15) NULL, 
+    [Phone] [nvarchar] (20) NULL, 
+    [Salutation] [nvarchar] (8) NULL, 
+    [Unknown] [int] NULL 
+) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_TABLE</EventType><PostTime>2010-09-30T11:12:47.557</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>ProspectiveBuyer</ObjectName><ObjectType>TABLE</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE TABLE [dbo].[ProspectiveBuyer] (&#x0D;
+	[ProspectiveBuyerKey] [int] IDENTITY(1, 1) NOT NULL,&#x0D;
+    [ProspectAlternateKey] [nvarchar] (15) NULL,&#x0D;
+    [FirstName] [nvarchar] (50) NULL,&#x0D;
+    [MiddleName] [nvarchar] (50) NULL,&#x0D;
+    [LastName] [nvarchar] (50) NULL,&#x0D;
+    [BirthDate] [datetime] NULL,&#x0D;
+    [MaritalStatus] [nchar] (1) NULL,&#x0D;
+    [Gender] [nvarchar] (1) NULL,&#x0D;
+    [EmailAddress] [nvarchar] (50) NULL,&#x0D;
+    [YearlyIncome] [money] NULL,&#x0D;
+    [TotalChildren] [tinyint] NULL,&#x0D;
+    [NumberChildrenAtHome] [tinyint] NULL,&#x0D;
+    [Education] [nvarchar] (40) NULL,&#x0D;
+    [Occupation] [nvarchar] (100) NULL,&#x0D;
+    [HouseOwnerFlag] [nchar] (1) NULL,&#x0D;
+    [NumberCarsOwned] [tinyint] NULL,&#x0D;
+    [AddressLine1] [nvarchar] (120) NULL,&#x0D;
+    [AddressLine2] [nvarchar] (120) NULL,&#x0D;
+    [City] [nvarchar](30) NULL, &#x0D;
+    [StateProvinceCode] [nvarchar] (3) NULL,&#x0D;
+    [PostalCode] [nvarchar](15) NULL, &#x0D;
+    [Phone] [nvarchar] (20) NULL, &#x0D;
+    [Salutation] [nvarchar] (8) NULL, &#x0D;
+    [Unknown] [int] NULL &#x0D;
+) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+27|2010-09-30 11:12:51.037000000|dbo|ALTER_TABLE|dbo|DimAccount|ALTER TABLE [dbo].[DimAccount] WITH CHECK ADD 
+    CONSTRAINT [PK_DimAccount] PRIMARY KEY CLUSTERED 
+    (
+        [AccountKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.037</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimAccount</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimAccount</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimAccount] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimAccount] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [AccountKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+28|2010-09-30 11:12:51.043000000|dbo|ALTER_TABLE|dbo|DimCurrency|ALTER TABLE [dbo].[DimCurrency] WITH CHECK ADD 
+    CONSTRAINT [PK_DimCurrency_CurrencyKey] PRIMARY KEY CLUSTERED 
+    (
+        [CurrencyKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.043</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCurrency</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimCurrency_CurrencyKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimCurrency] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimCurrency_CurrencyKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [CurrencyKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+29|2010-09-30 11:12:51.290000000|dbo|ALTER_TABLE|dbo|DimCustomer|ALTER TABLE [dbo].[DimCustomer] WITH CHECK ADD 
+    CONSTRAINT [PK_DimCustomer_CustomerKey] PRIMARY KEY CLUSTERED 
+    (
+        [CustomerKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.290</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCustomer</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimCustomer_CustomerKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimCustomer] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimCustomer_CustomerKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [CustomerKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+30|2010-09-30 11:12:51.297000000|dbo|ALTER_TABLE|dbo|DimDepartmentGroup|ALTER TABLE [dbo].[DimDepartmentGroup] WITH CHECK ADD 
+    CONSTRAINT [PK_DimDepartmentGroup] PRIMARY KEY CLUSTERED 
+    (
+        [DepartmentGroupKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.293</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimDepartmentGroup</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimDepartmentGroup</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimDepartmentGroup] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimDepartmentGroup] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [DepartmentGroupKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+31|2010-09-30 11:12:51.303000000|dbo|ALTER_TABLE|dbo|DimEmployee|ALTER TABLE [dbo].[DimEmployee] WITH CHECK ADD 
+    CONSTRAINT [PK_DimEmployee_EmployeeKey] PRIMARY KEY CLUSTERED 
+    (
+        [EmployeeKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.303</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimEmployee</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimEmployee_EmployeeKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimEmployee] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimEmployee_EmployeeKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [EmployeeKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+32|2010-09-30 11:12:51.317000000|dbo|ALTER_TABLE|dbo|DimGeography|ALTER TABLE [dbo].[DimGeography] WITH CHECK ADD 
+    CONSTRAINT [PK_DimGeography_GeographyKey] PRIMARY KEY CLUSTERED 
+    (
+        [GeographyKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.317</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimGeography</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimGeography_GeographyKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimGeography] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimGeography_GeographyKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [GeographyKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+79|2010-09-30 11:12:54.857000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_ShipDateKey|CREATE INDEX [IX_FactResellerSales_ShipDateKey] ON [dbo].[FactResellerSales]([ShipDateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:54.857</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_ShipDateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_ShipDateKey] ON [dbo].[FactResellerSales]([ShipDateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+33|2010-09-30 11:12:51.320000000|dbo|ALTER_TABLE|dbo|DimOrganization|ALTER TABLE [dbo].[DimOrganization] WITH CHECK ADD 
+    CONSTRAINT [PK_DimOrganization] PRIMARY KEY CLUSTERED 
+    (
+        [OrganizationKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.320</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimOrganization</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimOrganization</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimOrganization] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimOrganization] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [OrganizationKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+34|2010-09-30 11:12:51.357000000|dbo|ALTER_TABLE|dbo|DimProduct|ALTER TABLE [dbo].[DimProduct] WITH CHECK ADD 
+    CONSTRAINT [PK_DimProduct_ProductKey] PRIMARY KEY CLUSTERED 
+    (
+        [ProductKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.353</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProduct</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimProduct_ProductKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProduct] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimProduct_ProductKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [ProductKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+35|2010-09-30 11:12:51.360000000|dbo|ALTER_TABLE|dbo|DimProductCategory|ALTER TABLE [dbo].[DimProductCategory] WITH CHECK ADD 
+    CONSTRAINT [PK_DimProductCategory_ProductCategoryKey] PRIMARY KEY CLUSTERED 
+    (
+        [ProductCategoryKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.360</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductCategory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimProductCategory_ProductCategoryKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProductCategory] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimProductCategory_ProductCategoryKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [ProductCategoryKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+84|2010-09-30 11:12:55.637000000|dbo|CREATE_INDEX|dbo|IX_FactSurveyResponse_DateKey|CREATE INDEX [IX_FactSurveyResponse_DateKey] ON [dbo].[FactSurveyResponse] ([DateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.637</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactSurveyResponse_DateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactSurveyResponse</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactSurveyResponse_DateKey] ON [dbo].[FactSurveyResponse] ([DateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+36|2010-09-30 11:12:51.367000000|dbo|ALTER_TABLE|dbo|DimProductSubcategory|ALTER TABLE [dbo].[DimProductSubcategory] WITH CHECK ADD 
+    CONSTRAINT [PK_DimProductSubcategory_ProductSubcategoryKey] PRIMARY KEY CLUSTERED 
+    (
+        [ProductSubcategoryKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.367</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductSubcategory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimProductSubcategory_ProductSubcategoryKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProductSubcategory] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimProductSubcategory_ProductSubcategoryKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [ProductSubcategoryKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+37|2010-09-30 11:12:51.370000000|dbo|ALTER_TABLE|dbo|DimPromotion|ALTER TABLE [dbo].[DimPromotion] WITH CHECK ADD 
+    CONSTRAINT [PK_DimPromotion_PromotionKey] PRIMARY KEY CLUSTERED 
+    (
+        [PromotionKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.370</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimPromotion</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimPromotion_PromotionKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimPromotion] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimPromotion_PromotionKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [PromotionKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+38|2010-09-30 11:12:51.380000000|dbo|ALTER_TABLE|dbo|DimReseller|ALTER TABLE [dbo].[DimReseller] WITH CHECK ADD 
+    CONSTRAINT [PK_DimReseller_ResellerKey] PRIMARY KEY CLUSTERED 
+    (
+        [ResellerKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.380</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimReseller</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimReseller_ResellerKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimReseller] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimReseller_ResellerKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [ResellerKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+82|2010-09-30 11:12:55.627000000|dbo|CREATE_INDEX|dbo|IX_FactSalesQuota_EmployeeKey|CREATE INDEX [IX_FactSalesQuota_EmployeeKey] ON [dbo].[FactSalesQuota]([EmployeeKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.627</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactSalesQuota_EmployeeKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactSalesQuota</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactSalesQuota_EmployeeKey] ON [dbo].[FactSalesQuota]([EmployeeKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+39|2010-09-30 11:12:51.383000000|dbo|ALTER_TABLE|dbo|DimSalesReason|ALTER TABLE [dbo].[DimSalesReason] WITH CHECK ADD 
+    CONSTRAINT [PK_DimSalesReason_SalesReasonKey] PRIMARY KEY CLUSTERED 
+    (
+        [SalesReasonKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.383</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimSalesReason</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimSalesReason_SalesReasonKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimSalesReason] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimSalesReason_SalesReasonKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [SalesReasonKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+40|2010-09-30 11:12:51.390000000|dbo|ALTER_TABLE|dbo|DimSalesTerritory|ALTER TABLE [dbo].[DimSalesTerritory] WITH CHECK ADD 
+    CONSTRAINT [PK_DimSalesTerritory_SalesTerritoryKey] PRIMARY KEY CLUSTERED 
+    (
+        [SalesTerritoryKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.390</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimSalesTerritory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimSalesTerritory_SalesTerritoryKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimSalesTerritory] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimSalesTerritory_SalesTerritoryKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+41|2010-09-30 11:12:51.393000000|dbo|ALTER_TABLE|dbo|DimScenario|ALTER TABLE [dbo].[DimScenario] WITH CHECK ADD 
+    CONSTRAINT [PK_DimScenario] PRIMARY KEY CLUSTERED 
+    (
+        [ScenarioKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.393</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimScenario</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimScenario</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimScenario] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimScenario] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [ScenarioKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+42|2010-09-30 11:12:51.403000000|dbo|ALTER_TABLE|dbo|DimDate|ALTER TABLE [dbo].[DimDate] WITH CHECK ADD 
+    CONSTRAINT [PK_DimDate_DateKey] PRIMARY KEY CLUSTERED 
+    (
+        [DateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.403</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimDate</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_DimDate_DateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimDate] WITH CHECK ADD &#x0D;
+    CONSTRAINT [PK_DimDate_DateKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [DateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+43|2010-09-30 11:12:51.410000000|dbo|ALTER_TABLE|dbo|FactCallCenter|ALTER TABLE [dbo].[FactCallCenter] WITH CHECK ADD
+	CONSTRAINT [PK_FactCallCenter_FactCallCenterID] PRIMARY KEY CLUSTERED
+	(
+		[FactCallCenterID]
+	) ON [PRIMARY];
+	
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.407</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCallCenter</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactCallCenter_FactCallCenterID</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactCallCenter] WITH CHECK ADD&#x0D;
+	CONSTRAINT [PK_FactCallCenter_FactCallCenterID] PRIMARY KEY CLUSTERED&#x0D;
+	(&#x0D;
+		[FactCallCenterID]&#x0D;
+	) ON [PRIMARY];&#x0D;
+	&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+44|2010-09-30 11:12:51.457000000|dbo|ALTER_TABLE|dbo|FactCurrencyRate|ALTER TABLE [dbo].[FactCurrencyRate] WITH CHECK ADD
+	CONSTRAINT [PK_FactCurrencyRate_CurrencyKey_DateKey] PRIMARY KEY CLUSTERED
+	(
+		[CurrencyKey],
+		[DateKey]
+	) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.453</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCurrencyRate</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactCurrencyRate_CurrencyKey_DateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactCurrencyRate] WITH CHECK ADD&#x0D;
+	CONSTRAINT [PK_FactCurrencyRate_CurrencyKey_DateKey] PRIMARY KEY CLUSTERED&#x0D;
+	(&#x0D;
+		[CurrencyKey],&#x0D;
+		[DateKey]&#x0D;
+	) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+45|2010-09-30 11:12:51.937000000|dbo|ALTER_TABLE|dbo|FactInternetSales|ALTER TABLE [dbo].[FactInternetSales] ADD 
+    CONSTRAINT [PK_FactInternetSales_SalesOrderNumber_SalesOrderLineNumber] PRIMARY KEY CLUSTERED 
+    (
+        [SalesOrderNumber],
+        [SalesOrderLineNumber]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:51.933</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactInternetSales</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactInternetSales_SalesOrderNumber_SalesOrderLineNumber</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactInternetSales] ADD &#x0D;
+    CONSTRAINT [PK_FactInternetSales_SalesOrderNumber_SalesOrderLineNumber] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [SalesOrderNumber],&#x0D;
+        [SalesOrderLineNumber]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+46|2010-09-30 11:12:52.437000000|dbo|ALTER_TABLE|dbo|FactResellerSales|ALTER TABLE [dbo].[FactResellerSales] ADD 
+    CONSTRAINT [PK_FactResellerSales_SalesOrderNumber_SalesOrderLineNumber] PRIMARY KEY CLUSTERED 
+    (
+        [SalesOrderNumber],
+        [SalesOrderLineNumber]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.437</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactResellerSales</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactResellerSales_SalesOrderNumber_SalesOrderLineNumber</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactResellerSales] ADD &#x0D;
+    CONSTRAINT [PK_FactResellerSales_SalesOrderNumber_SalesOrderLineNumber] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [SalesOrderNumber],&#x0D;
+        [SalesOrderLineNumber]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+47|2010-09-30 11:12:52.603000000|dbo|ALTER_TABLE|dbo|FactInternetSalesReason|ALTER TABLE [dbo].[FactInternetSalesReason] ADD 
+    CONSTRAINT [PK_FactInternetSalesReason_SalesOrderNumber_SalesOrderLineNumber_SalesReasonKey] PRIMARY KEY CLUSTERED 
+    (
+        [SalesOrderNumber],
+        [SalesOrderLineNumber],
+        [SalesReasonKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.603</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactInternetSalesReason</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactInternetSalesReason_SalesOrderNumber_SalesOrderLineNumber_SalesReasonKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactInternetSalesReason] ADD &#x0D;
+    CONSTRAINT [PK_FactInternetSalesReason_SalesOrderNumber_SalesOrderLineNumber_SalesReasonKey] PRIMARY KEY CLUSTERED &#x0D;
+    (&#x0D;
+        [SalesOrderNumber],&#x0D;
+        [SalesOrderLineNumber],&#x0D;
+        [SalesReasonKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+48|2010-09-30 11:12:52.610000000|dbo|ALTER_TABLE|dbo|FactSalesQuota|ALTER TABLE [dbo].[FactSalesQuota] ADD
+	CONSTRAINT [PK_FactSalesQuota_SalesQuotaKey] PRIMARY KEY CLUSTERED
+	(
+		[SalesQuotaKey]
+	) ON [PRIMARY];
+	
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.610</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactSalesQuota</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactSalesQuota_SalesQuotaKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactSalesQuota] ADD&#x0D;
+	CONSTRAINT [PK_FactSalesQuota_SalesQuotaKey] PRIMARY KEY CLUSTERED&#x0D;
+	(&#x0D;
+		[SalesQuotaKey]&#x0D;
+	) ON [PRIMARY];&#x0D;
+	&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+63|2010-09-30 11:12:52.780000000|dbo|CREATE_INDEX|dbo|IX_DimReseller_GeographyKey|CREATE INDEX [IX_DimReseller_GeographyKey] ON [dbo].[DimReseller]([GeographyKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.780</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_DimReseller_GeographyKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>DimReseller</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_DimReseller_GeographyKey] ON [dbo].[DimReseller]([GeographyKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+67|2010-09-30 11:12:52.913000000|dbo|CREATE_INDEX|dbo|IX_FactInternetSales_CurrencyKey|CREATE INDEX [IX_FactInternetSales_CurrencyKey] ON [dbo].[FactInternetSales]([CurrencyKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.913</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactInternetSales_CurrencyKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactInternetSales_CurrencyKey] ON [dbo].[FactInternetSales]([CurrencyKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+49|2010-09-30 11:12:52.620000000|dbo|ALTER_TABLE|dbo|FactSurveyResponse|ALTER TABLE [dbo].[FactSurveyResponse] ADD
+	CONSTRAINT [PK_FactSurveyResponse_SurveyResponseKey] PRIMARY KEY CLUSTERED
+	(
+		[SurveyResponseKey]
+	) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.620</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactSurveyResponse</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_FactSurveyResponse_SurveyResponseKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactSurveyResponse] ADD&#x0D;
+	CONSTRAINT [PK_FactSurveyResponse_SurveyResponseKey] PRIMARY KEY CLUSTERED&#x0D;
+	(&#x0D;
+		[SurveyResponseKey]&#x0D;
+	) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+50|2010-09-30 11:12:52.637000000|dbo|ALTER_TABLE|dbo|ProspectiveBuyer|ALTER TABLE [dbo].[ProspectiveBuyer] ADD
+	CONSTRAINT [PK_ProspectiveBuyer_ProspectiveBuyerKey] PRIMARY KEY CLUSTERED
+	(
+		[ProspectiveBuyerKey]
+	) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.637</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>ProspectiveBuyer</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>PK_ProspectiveBuyer_ProspectiveBuyerKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[ProspectiveBuyer] ADD&#x0D;
+	CONSTRAINT [PK_ProspectiveBuyer_ProspectiveBuyerKey] PRIMARY KEY CLUSTERED&#x0D;
+	(&#x0D;
+		[ProspectiveBuyerKey]&#x0D;
+	) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+51|2010-09-30 11:12:52.667000000|dbo|CREATE_INDEX|dbo|AK_DimAccount_AccountCodeAlternateKey|CREATE UNIQUE INDEX [AK_DimAccount_AccountCodeAlternateKey] ON [dbo].[DimAccount]([AccountCodeAlternateKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.667</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>AK_DimAccount_AccountCodeAlternateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>DimAccount</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE UNIQUE INDEX [AK_DimAccount_AccountCodeAlternateKey] ON [dbo].[DimAccount]([AccountCodeAlternateKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+52|2010-09-30 11:12:52.670000000|dbo|ALTER_TABLE|dbo|DimCurrency|ALTER TABLE [dbo].[DimCurrency] ADD 
+    CONSTRAINT [AK_DimCurrency_CurrencyAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [CurrencyAlternateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.670</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCurrency</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimCurrency_CurrencyAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimCurrency] ADD &#x0D;
+    CONSTRAINT [AK_DimCurrency_CurrencyAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [CurrencyAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+53|2010-09-30 11:12:52.710000000|dbo|ALTER_TABLE|dbo|DimCustomer|ALTER TABLE [dbo].[DimCustomer] ADD 
+    CONSTRAINT [IX_DimCustomer_CustomerAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [CustomerAlternateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.710</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCustomer</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>IX_DimCustomer_CustomerAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimCustomer] ADD &#x0D;
+    CONSTRAINT [IX_DimCustomer_CustomerAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [CustomerAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+54|2010-09-30 11:12:52.737000000|dbo|CREATE_INDEX|dbo|IX_DimCustomer_GeographyKey|CREATE INDEX [IX_DimCustomer_GeographyKey] ON [dbo].[DimCustomer]([GeographyKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.737</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_DimCustomer_GeographyKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>DimCustomer</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_DimCustomer_GeographyKey] ON [dbo].[DimCustomer]([GeographyKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+55|2010-09-30 11:12:52.740000000|dbo|CREATE_INDEX|dbo|IX_DimEmployee_ParentEmployeeKey|CREATE INDEX [IX_DimEmployee_ParentEmployeeKey] ON [dbo].[DimEmployee]([ParentEmployeeKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.740</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_DimEmployee_ParentEmployeeKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>DimEmployee</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_DimEmployee_ParentEmployeeKey] ON [dbo].[DimEmployee]([ParentEmployeeKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+57|2010-09-30 11:12:52.750000000|dbo|ALTER_TABLE|dbo|DimProduct|ALTER TABLE [dbo].[DimProduct] ADD 
+    CONSTRAINT [AK_DimProduct_ProductAlternateKey_StartDate] UNIQUE NONCLUSTERED 
+    (
+        [ProductAlternateKey],
+        [StartDate]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.750</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProduct</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimProduct_ProductAlternateKey_StartDate</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProduct] ADD &#x0D;
+    CONSTRAINT [AK_DimProduct_ProductAlternateKey_StartDate] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [ProductAlternateKey],&#x0D;
+        [StartDate]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+58|2010-09-30 11:12:52.757000000|dbo|CREATE_INDEX|dbo|IX_DimProduct_ProductSubcategoryKey|CREATE INDEX [IX_DimProduct_ProductSubcategoryKey] ON [dbo].[DimProduct]([ProductSubcategoryKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:52.757</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_DimProduct_ProductSubcategoryKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>DimProduct</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_DimProduct_ProductSubcategoryKey] ON [dbo].[DimProduct]([ProductSubcategoryKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+59|2010-09-30 11:12:52.760000000|dbo|ALTER_TABLE|dbo|DimProductCategory|ALTER TABLE [dbo].[DimProductCategory] ADD 
+    CONSTRAINT [AK_DimProductCategory_ProductCategoryAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [ProductCategoryAlternateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.760</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductCategory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimProductCategory_ProductCategoryAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProductCategory] ADD &#x0D;
+    CONSTRAINT [AK_DimProductCategory_ProductCategoryAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [ProductCategoryAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+69|2010-09-30 11:12:53.127000000|dbo|CREATE_INDEX|dbo|IX_FactInternetSales_DueDateKey|CREATE INDEX [IX_FactInternetSales_DueDateKey] ON [dbo].[FactInternetSales]([DueDateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.127</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactInternetSales_DueDateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactInternetSales_DueDateKey] ON [dbo].[FactInternetSales]([DueDateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+60|2010-09-30 11:12:52.763000000|dbo|ALTER_TABLE|dbo|DimProductSubcategory|ALTER TABLE [dbo].[DimProductSubcategory] ADD 
+    CONSTRAINT [AK_DimProductSubcategory_ProductSubcategoryAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [ProductSubcategoryAlternateKey]
+    )  ON [PRIMARY];
+
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.763</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductSubcategory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimProductSubcategory_ProductSubcategoryAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProductSubcategory] ADD &#x0D;
+    CONSTRAINT [AK_DimProductSubcategory_ProductSubcategoryAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [ProductSubcategoryAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+61|2010-09-30 11:12:52.767000000|dbo|ALTER_TABLE|dbo|DimPromotion|ALTER TABLE [dbo].[DimPromotion] ADD 
+    CONSTRAINT [AK_DimPromotion_PromotionAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [PromotionAlternateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.767</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimPromotion</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimPromotion_PromotionAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimPromotion] ADD &#x0D;
+    CONSTRAINT [AK_DimPromotion_PromotionAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [PromotionAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+62|2010-09-30 11:12:52.773000000|dbo|ALTER_TABLE|dbo|DimReseller|ALTER TABLE [dbo].[DimReseller] ADD 
+    CONSTRAINT [AK_DimReseller_ResellerAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [ResellerAlternateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.773</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimReseller</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimReseller_ResellerAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimReseller] ADD &#x0D;
+    CONSTRAINT [AK_DimReseller_ResellerAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [ResellerAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+64|2010-09-30 11:12:52.780000000|dbo|ALTER_TABLE|dbo|DimSalesTerritory|ALTER TABLE [dbo].[DimSalesTerritory] ADD 
+    CONSTRAINT [AK_DimSalesTerritory_SalesTerritoryAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [SalesTerritoryAlternateKey]
+    )  ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.780</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimSalesTerritory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimSalesTerritory_SalesTerritoryAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimSalesTerritory] ADD &#x0D;
+    CONSTRAINT [AK_DimSalesTerritory_SalesTerritoryAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [SalesTerritoryAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+65|2010-09-30 11:12:52.787000000|dbo|ALTER_TABLE|dbo|DimDate|ALTER TABLE [dbo].[DimDate] ADD 
+    CONSTRAINT [AK_DimDate_FullDateAlternateKey] UNIQUE NONCLUSTERED 
+    (
+        [FullDateAlternateKey]
+    )  ON [PRIMARY];
+
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.787</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimDate</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_DimDate_FullDateAlternateKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimDate] ADD &#x0D;
+    CONSTRAINT [AK_DimDate_FullDateAlternateKey] UNIQUE NONCLUSTERED &#x0D;
+    (&#x0D;
+        [FullDateAlternateKey]&#x0D;
+    )  ON [PRIMARY];&#x0D;
+&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+66|2010-09-30 11:12:52.790000000|dbo|ALTER_TABLE|dbo|FactCallCenter|ALTER TABLE [dbo].[FactCallCenter] ADD
+	CONSTRAINT [AK_FactCallCenter_DateKey_Shift] UNIQUE NONCLUSTERED
+	(
+		[DateKey],
+		[Shift]
+	)  ON [PRIMARY];
+
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:52.790</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCallCenter</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>AK_FactCallCenter_DateKey_Shift</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactCallCenter] ADD&#x0D;
+	CONSTRAINT [AK_FactCallCenter_DateKey_Shift] UNIQUE NONCLUSTERED&#x0D;
+	(&#x0D;
+		[DateKey],&#x0D;
+		[Shift]&#x0D;
+	)  ON [PRIMARY];&#x0D;
+&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+71|2010-09-30 11:12:53.413000000|dbo|CREATE_INDEX|dbo|IX_FactInternetSales_ProductKey|CREATE INDEX [IX_FactInternetSales_ProductKey] ON [dbo].[FactInternetSales]([ProductKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.410</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactInternetSales_ProductKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactInternetSales_ProductKey] ON [dbo].[FactInternetSales]([ProductKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+73|2010-09-30 11:12:53.720000000|dbo|CREATE_INDEX|dbo|IX_FactIneternetSales_ShipDateKey|CREATE INDEX [IX_FactIneternetSales_ShipDateKey] ON [dbo].[FactInternetSales]([ShipDateKey]) ON [PRIMARY];
+
+
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.720</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactIneternetSales_ShipDateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactInternetSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactIneternetSales_ShipDateKey] ON [dbo].[FactInternetSales]([ShipDateKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+74|2010-09-30 11:12:53.870000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_CurrencyKey|CREATE INDEX [IX_FactResellerSales_CurrencyKey] ON [dbo].[FactResellerSales]([CurrencyKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.870</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_CurrencyKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_CurrencyKey] ON [dbo].[FactResellerSales]([CurrencyKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+75|2010-09-30 11:12:53.987000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_DueDateKey|CREATE INDEX [IX_FactResellerSales_DueDateKey] ON [dbo].[FactResellerSales]([DueDateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:53.983</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_DueDateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_DueDateKey] ON [dbo].[FactResellerSales]([DueDateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+76|2010-09-30 11:12:54.100000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_OrderDateKey|CREATE INDEX [IX_FactResellerSales_OrderDateKey] ON [dbo].[FactResellerSales]([OrderDateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:54.100</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_OrderDateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_OrderDateKey] ON [dbo].[FactResellerSales]([OrderDateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+77|2010-09-30 11:12:54.253000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_ProductKey|CREATE INDEX [IX_FactResellerSales_ProductKey] ON [dbo].[FactResellerSales]([ProductKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:54.253</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_ProductKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_ProductKey] ON [dbo].[FactResellerSales]([ProductKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+81|2010-09-30 11:12:55.623000000|dbo|CREATE_INDEX|dbo|IX_FactResellerSales_ResellerKey|CREATE INDEX [IX_FactResellerSales_ResellerKey] ON [dbo].[FactResellerSales]([ResellerKey]) ON [PRIMARY];
+    
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.623</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactResellerSales_ResellerKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactResellerSales</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactResellerSales_ResellerKey] ON [dbo].[FactResellerSales]([ResellerKey]) ON [PRIMARY];&#x0D;
+    &#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+86|2010-09-30 11:12:55.650000000|dbo|CREATE_INDEX|dbo|IX_FactSurveyResponse_ProductSubcategoryKey|CREATE INDEX [IX_FactSurveyResponse_ProductSubcategoryKey] ON [dbo].[FactSurveyResponse] ([ProductSubcategoryKey]) ON [PRIMARY];
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.650</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_FactSurveyResponse_ProductSubcategoryKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>FactSurveyResponse</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_FactSurveyResponse_ProductSubcategoryKey] ON [dbo].[FactSurveyResponse] ([ProductSubcategoryKey]) ON [PRIMARY];&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+87|2010-09-30 11:12:55.660000000|dbo|CREATE_INDEX|dbo|IX_ProspectiveBuyer_ProspectAlternateKey|CREATE INDEX [IX_ProspectiveBuyer_ProspectAlternateKey] ON [dbo].[ProspectiveBuyer]([ProspectAlternateKey]) ON [PRIMARY];
+|﻿<EVENT_INSTANCE><EventType>CREATE_INDEX</EventType><PostTime>2010-09-30T11:12:55.660</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>IX_ProspectiveBuyer_ProspectAlternateKey</ObjectName><ObjectType>INDEX</ObjectType><TargetObjectName>ProspectiveBuyer</TargetObjectName><TargetObjectType>TABLE</TargetObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>CREATE INDEX [IX_ProspectiveBuyer_ProspectAlternateKey] ON [dbo].[ProspectiveBuyer]([ProspectAlternateKey]) ON [PRIMARY];&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+88|2010-09-30 11:12:55.683000000|dbo|ALTER_TABLE|dbo|DimAccount|ALTER TABLE [dbo].[DimAccount] ADD 
+    CONSTRAINT [FK_DimAccount_DimAccount] FOREIGN KEY 
+    (
+        [ParentAccountKey]
+    ) REFERENCES [dbo].[DimAccount] (
+        [AccountKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.683</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimAccount</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimAccount_DimAccount</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimAccount] ADD &#x0D;
+    CONSTRAINT [FK_DimAccount_DimAccount] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ParentAccountKey]&#x0D;
+    ) REFERENCES [dbo].[DimAccount] (&#x0D;
+        [AccountKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+89|2010-09-30 11:12:55.697000000|dbo|ALTER_TABLE|dbo|DimCustomer|ALTER TABLE [dbo].[DimCustomer] ADD 
+    CONSTRAINT [FK_DimCustomer_DimGeography] FOREIGN KEY 
+    (
+        [GeographyKey]
+    ) REFERENCES [dbo].[DimGeography] (
+        [GeographyKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.693</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimCustomer</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimCustomer_DimGeography</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimCustomer] ADD &#x0D;
+    CONSTRAINT [FK_DimCustomer_DimGeography] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [GeographyKey]&#x0D;
+    ) REFERENCES [dbo].[DimGeography] (&#x0D;
+        [GeographyKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+90|2010-09-30 11:12:55.700000000|dbo|ALTER_TABLE|dbo|DimDepartmentGroup|ALTER TABLE [dbo].[DimDepartmentGroup] ADD 
+    CONSTRAINT [FK_DimDepartmentGroup_DimDepartmentGroup] FOREIGN KEY 
+    (
+        [ParentDepartmentGroupKey]
+    ) REFERENCES [dbo].[DimDepartmentGroup] (
+        [DepartmentGroupKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.700</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimDepartmentGroup</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimDepartmentGroup_DimDepartmentGroup</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimDepartmentGroup] ADD &#x0D;
+    CONSTRAINT [FK_DimDepartmentGroup_DimDepartmentGroup] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ParentDepartmentGroupKey]&#x0D;
+    ) REFERENCES [dbo].[DimDepartmentGroup] (&#x0D;
+        [DepartmentGroupKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+91|2010-09-30 11:12:55.707000000|dbo|ALTER_TABLE|dbo|DimEmployee|ALTER TABLE [dbo].[DimEmployee] ADD 
+    CONSTRAINT [FK_DimEmployee_DimEmployee] FOREIGN KEY 
+    (
+        [ParentEmployeeKey]
+    ) REFERENCES [dbo].[DimEmployee] (
+        [EmployeeKey]
+    ),
+    CONSTRAINT [FK_DimEmployee_DimSalesTerritory] FOREIGN KEY 
+    (
+        [SalesTerritoryKey]
+    ) REFERENCES [dbo].[DimSalesTerritory] (
+        [SalesTerritoryKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.707</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimEmployee</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimEmployee_DimEmployee</Name><Name>FK_DimEmployee_DimSalesTerritory</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimEmployee] ADD &#x0D;
+    CONSTRAINT [FK_DimEmployee_DimEmployee] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ParentEmployeeKey]&#x0D;
+    ) REFERENCES [dbo].[DimEmployee] (&#x0D;
+        [EmployeeKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_DimEmployee_DimSalesTerritory] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    ) REFERENCES [dbo].[DimSalesTerritory] (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+92|2010-09-30 11:12:55.710000000|dbo|ALTER_TABLE|dbo|DimGeography|ALTER TABLE [dbo].[DimGeography] ADD 
+    CONSTRAINT [FK_DimGeography_DimSalesTerritory] FOREIGN KEY 
+    (
+        [SalesTerritoryKey]
+    ) REFERENCES [dbo].[DimSalesTerritory] (
+        [SalesTerritoryKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.710</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimGeography</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimGeography_DimSalesTerritory</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimGeography] ADD &#x0D;
+    CONSTRAINT [FK_DimGeography_DimSalesTerritory] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    ) REFERENCES [dbo].[DimSalesTerritory] (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+93|2010-09-30 11:12:55.717000000|dbo|ALTER_TABLE|dbo|DimOrganization|ALTER TABLE [dbo].[DimOrganization] ADD 
+    CONSTRAINT [FK_DimOrganization_DimOrganization] FOREIGN KEY 
+    (
+        [ParentOrganizationKey]
+    ) REFERENCES [dbo].[DimOrganization] (
+        [OrganizationKey]
+    ),
+    CONSTRAINT [FK_DimOrganization_DimCurrency] FOREIGN KEY
+    (
+        [CurrencyKey]
+    ) REFERENCES [dbo].[DimCurrency] (
+        [CurrencyKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.717</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimOrganization</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimOrganization_DimOrganization</Name><Name>FK_DimOrganization_DimCurrency</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimOrganization] ADD &#x0D;
+    CONSTRAINT [FK_DimOrganization_DimOrganization] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ParentOrganizationKey]&#x0D;
+    ) REFERENCES [dbo].[DimOrganization] (&#x0D;
+        [OrganizationKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_DimOrganization_DimCurrency] FOREIGN KEY&#x0D;
+    (&#x0D;
+        [CurrencyKey]&#x0D;
+    ) REFERENCES [dbo].[DimCurrency] (&#x0D;
+        [CurrencyKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+94|2010-09-30 11:12:55.720000000|dbo|ALTER_TABLE|dbo|DimProduct|ALTER TABLE [dbo].[DimProduct] ADD 
+    CONSTRAINT [FK_DimProduct_DimProductSubcategory] FOREIGN KEY 
+    (
+        [ProductSubcategoryKey]
+    ) REFERENCES [dbo].[DimProductSubcategory] (
+        [ProductSubcategoryKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.720</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProduct</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimProduct_DimProductSubcategory</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProduct] ADD &#x0D;
+    CONSTRAINT [FK_DimProduct_DimProductSubcategory] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ProductSubcategoryKey]&#x0D;
+    ) REFERENCES [dbo].[DimProductSubcategory] (&#x0D;
+        [ProductSubcategoryKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+95|2010-09-30 11:12:55.727000000|dbo|ALTER_TABLE|dbo|DimProductSubcategory|ALTER TABLE [dbo].[DimProductSubcategory] ADD 
+    CONSTRAINT [FK_DimProductSubcategory_DimProductCategory] FOREIGN KEY 
+    (
+        [ProductCategoryKey]
+    ) REFERENCES [dbo].[DimProductCategory] (
+        [ProductCategoryKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.723</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimProductSubcategory</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimProductSubcategory_DimProductCategory</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimProductSubcategory] ADD &#x0D;
+    CONSTRAINT [FK_DimProductSubcategory_DimProductCategory] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ProductCategoryKey]&#x0D;
+    ) REFERENCES [dbo].[DimProductCategory] (&#x0D;
+        [ProductCategoryKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+96|2010-09-30 11:12:55.733000000|dbo|ALTER_TABLE|dbo|DimReseller|ALTER TABLE [dbo].[DimReseller] ADD 
+    CONSTRAINT [FK_DimReseller_DimGeography] FOREIGN KEY 
+    (
+        [GeographyKey]
+    ) REFERENCES [dbo].[DimGeography] (
+        [GeographyKey]
+    );
+    
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.733</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>DimReseller</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_DimReseller_DimGeography</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[DimReseller] ADD &#x0D;
+    CONSTRAINT [FK_DimReseller_DimGeography] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [GeographyKey]&#x0D;
+    ) REFERENCES [dbo].[DimGeography] (&#x0D;
+        [GeographyKey]&#x0D;
+    );&#x0D;
+    &#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+97|2010-09-30 11:12:55.737000000|dbo|ALTER_TABLE|dbo|FactCallCenter|ALTER TABLE [dbo].[FactCallCenter] ADD
+	CONSTRAINT [FK_FactCallCenter_DimDate] FOREIGN KEY
+	(
+		[DateKey]
+	) REFERENCES [dbo].[DimDate] (
+		[DateKey]
+	);
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.737</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCallCenter</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactCallCenter_DimDate</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactCallCenter] ADD&#x0D;
+	CONSTRAINT [FK_FactCallCenter_DimDate] FOREIGN KEY&#x0D;
+	(&#x0D;
+		[DateKey]&#x0D;
+	) REFERENCES [dbo].[DimDate] (&#x0D;
+		[DateKey]&#x0D;
+	);&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+98|2010-09-30 11:12:55.773000000|dbo|ALTER_TABLE|dbo|FactCurrencyRate|ALTER TABLE [dbo].[FactCurrencyRate] ADD 
+    CONSTRAINT [FK_FactCurrencyRate_DimDate] FOREIGN KEY 
+    (
+        [DateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactCurrencyRate_DimCurrency] FOREIGN KEY 
+    (
+        [CurrencyKey]
+    ) REFERENCES [dbo].[DimCurrency] (
+        [CurrencyKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.773</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactCurrencyRate</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactCurrencyRate_DimDate</Name><Name>FK_FactCurrencyRate_DimCurrency</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactCurrencyRate] ADD &#x0D;
+    CONSTRAINT [FK_FactCurrencyRate_DimDate] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [DateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactCurrencyRate_DimCurrency] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [CurrencyKey]&#x0D;
+    ) REFERENCES [dbo].[DimCurrency] (&#x0D;
+        [CurrencyKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+99|2010-09-30 11:12:55.983000000|dbo|ALTER_TABLE|dbo|FactFinance|ALTER TABLE [dbo].[FactFinance] ADD 
+    CONSTRAINT [FK_FactFinance_DimAccount] FOREIGN KEY 
+    (
+        [AccountKey]
+    ) REFERENCES [dbo].[DimAccount] (
+        [AccountKey]
+    ),
+    CONSTRAINT [FK_FactFinance_DimDepartmentGroup] FOREIGN KEY 
+    (
+        [DepartmentGroupKey]
+    ) REFERENCES [dbo].[DimDepartmentGroup] (
+        [DepartmentGroupKey]
+    ),
+    CONSTRAINT [FK_FactFinance_DimOrganization] FOREIGN KEY 
+    (
+        [OrganizationKey]
+    ) REFERENCES [dbo].[DimOrganization] (
+        [OrganizationKey]
+    ),
+    CONSTRAINT [FK_FactFinance_DimScenario] FOREIGN KEY 
+    (
+        [ScenarioKey]
+    ) REFERENCES [dbo].[DimScenario] (
+        [ScenarioKey]
+    ),
+    CONSTRAINT [FK_FactFinance_DimDate] FOREIGN KEY 
+    (
+        [DateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:55.983</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactFinance</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactFinance_DimAccount</Name><Name>FK_FactFinance_DimDepartmentGroup</Name><Name>FK_FactFinance_DimOrganization</Name><Name>FK_FactFinance_DimScenario</Name><Name>FK_FactFinance_DimDate</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactFinance] ADD &#x0D;
+    CONSTRAINT [FK_FactFinance_DimAccount] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [AccountKey]&#x0D;
+    ) REFERENCES [dbo].[DimAccount] (&#x0D;
+        [AccountKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactFinance_DimDepartmentGroup] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [DepartmentGroupKey]&#x0D;
+    ) REFERENCES [dbo].[DimDepartmentGroup] (&#x0D;
+        [DepartmentGroupKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactFinance_DimOrganization] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [OrganizationKey]&#x0D;
+    ) REFERENCES [dbo].[DimOrganization] (&#x0D;
+        [OrganizationKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactFinance_DimScenario] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ScenarioKey]&#x0D;
+    ) REFERENCES [dbo].[DimScenario] (&#x0D;
+        [ScenarioKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactFinance_DimDate] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [DateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+100|2010-09-30 11:12:56.313000000|dbo|ALTER_TABLE|dbo|FactInternetSalesReason|ALTER TABLE [dbo].[FactInternetSalesReason] ADD 
+    CONSTRAINT [FK_FactInternetSalesReason_DimSalesReason] FOREIGN KEY 
+    (
+        [SalesReasonKey]
+    ) REFERENCES [dbo].[DimSalesReason] (
+        [SalesReasonKey]
+    ),
+    CONSTRAINT [FK_FactInternetSalesReason_FactInternetSales] FOREIGN KEY 
+    (
+        [SalesOrderNumber],
+        [SalesOrderLineNumber]
+    ) REFERENCES [dbo].[FactInternetSales] (
+        [SalesOrderNumber],
+        [SalesOrderLineNumber]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:56.313</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactInternetSalesReason</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactInternetSalesReason_DimSalesReason</Name><Name>FK_FactInternetSalesReason_FactInternetSales</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactInternetSalesReason] ADD &#x0D;
+    CONSTRAINT [FK_FactInternetSalesReason_DimSalesReason] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [SalesReasonKey]&#x0D;
+    ) REFERENCES [dbo].[DimSalesReason] (&#x0D;
+        [SalesReasonKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSalesReason_FactInternetSales] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [SalesOrderNumber],&#x0D;
+        [SalesOrderLineNumber]&#x0D;
+    ) REFERENCES [dbo].[FactInternetSales] (&#x0D;
+        [SalesOrderNumber],&#x0D;
+        [SalesOrderLineNumber]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+103|2010-09-30 11:12:56.763000000|dbo|ALTER_TABLE|dbo|FactSalesQuota|ALTER TABLE [dbo].[FactSalesQuota] ADD 
+    CONSTRAINT [FK_FactSalesQuota_DimEmployee] FOREIGN KEY 
+    (
+        [EmployeeKey]
+    ) REFERENCES [dbo].[DimEmployee] (
+        [EmployeeKey]
+    ),
+    CONSTRAINT [FK_FactSalesQuota_DimDate] FOREIGN KEY 
+    (
+        [DateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    );
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:56.760</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactSalesQuota</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactSalesQuota_DimEmployee</Name><Name>FK_FactSalesQuota_DimDate</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactSalesQuota] ADD &#x0D;
+    CONSTRAINT [FK_FactSalesQuota_DimEmployee] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [EmployeeKey]&#x0D;
+    ) REFERENCES [dbo].[DimEmployee] (&#x0D;
+        [EmployeeKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactSalesQuota_DimDate] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [DateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    );&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+101|2010-09-30 11:12:56.540000000|dbo|ALTER_TABLE|dbo|FactInternetSales|ALTER TABLE [dbo].[FactInternetSales] ADD 
+    CONSTRAINT [FK_FactInternetSales_DimCurrency] FOREIGN KEY 
+    (
+        [CurrencyKey]
+    ) REFERENCES [dbo].[DimCurrency] (
+        [CurrencyKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimCustomer] FOREIGN KEY 
+    (
+        [CustomerKey]
+    ) REFERENCES [dbo].[DimCustomer] (
+        [CustomerKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimProduct] FOREIGN KEY 
+    (
+        [ProductKey]
+    ) REFERENCES [dbo].[DimProduct] (
+        [ProductKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimPromotion] FOREIGN KEY 
+    (
+        [PromotionKey]
+    ) REFERENCES [dbo].[DimPromotion] (
+        [PromotionKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimDate] FOREIGN KEY 
+    (
+        [OrderDateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimDate1] FOREIGN KEY 
+    (
+        [DueDateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimDate2] FOREIGN KEY 
+    (
+        [ShipDateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactInternetSales_DimSalesTerritory] FOREIGN KEY 
+    (
+        [SalesTerritoryKey]
+    ) REFERENCES [dbo].[DimSalesTerritory] (
+        [SalesTerritoryKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:56.540</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactInternetSales</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactInternetSales_DimCurrency</Name><Name>FK_FactInternetSales_DimCustomer</Name><Name>FK_FactInternetSales_DimProduct</Name><Name>FK_FactInternetSales_DimPromotion</Name><Name>FK_FactInternetSales_DimDate</Name><Name>FK_FactInternetSales_DimDate1</Name><Name>FK_FactInternetSales_DimDate2</Name><Name>FK_FactInternetSales_DimSalesTerritory</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactInternetSales] ADD &#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimCurrency] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [CurrencyKey]&#x0D;
+    ) REFERENCES [dbo].[DimCurrency] (&#x0D;
+        [CurrencyKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimCustomer] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [CustomerKey]&#x0D;
+    ) REFERENCES [dbo].[DimCustomer] (&#x0D;
+        [CustomerKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimProduct] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ProductKey]&#x0D;
+    ) REFERENCES [dbo].[DimProduct] (&#x0D;
+        [ProductKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimPromotion] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [PromotionKey]&#x0D;
+    ) REFERENCES [dbo].[DimPromotion] (&#x0D;
+        [PromotionKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimDate] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [OrderDateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimDate1] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [DueDateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimDate2] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ShipDateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactInternetSales_DimSalesTerritory] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    ) REFERENCES [dbo].[DimSalesTerritory] (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+102|2010-09-30 11:12:56.753000000|dbo|ALTER_TABLE|dbo|FactResellerSales|ALTER TABLE [dbo].[FactResellerSales] ADD 
+    CONSTRAINT [FK_FactResellerSales_DimCurrency] FOREIGN KEY 
+    (
+        [CurrencyKey]
+    ) REFERENCES [dbo].[DimCurrency] (
+        [CurrencyKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimProduct] FOREIGN KEY 
+    (
+        [ProductKey]
+    ) REFERENCES [dbo].[DimProduct] (
+        [ProductKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimPromotion] FOREIGN KEY 
+    (
+        [PromotionKey]
+    ) REFERENCES [dbo].[DimPromotion] (
+        [PromotionKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimDate] FOREIGN KEY 
+    (
+        [OrderDateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimDate1] FOREIGN KEY 
+    (
+        [DueDateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimDate2] FOREIGN KEY 
+    (
+        [ShipDateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimEmployee] FOREIGN KEY 
+    (
+        [EmployeeKey]
+    ) REFERENCES [dbo].[DimEmployee] (
+        [EmployeeKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimReseller] FOREIGN KEY 
+    (
+        [ResellerKey]
+    ) REFERENCES [dbo].[DimReseller] (
+        [ResellerKey]
+    ),
+    CONSTRAINT [FK_FactResellerSales_DimSalesTerritory] FOREIGN KEY 
+    (
+        [SalesTerritoryKey]
+    ) REFERENCES [dbo].[DimSalesTerritory] (
+        [SalesTerritoryKey]
+    );
+
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:56.753</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactResellerSales</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactResellerSales_DimCurrency</Name><Name>FK_FactResellerSales_DimProduct</Name><Name>FK_FactResellerSales_DimPromotion</Name><Name>FK_FactResellerSales_DimDate</Name><Name>FK_FactResellerSales_DimDate1</Name><Name>FK_FactResellerSales_DimDate2</Name><Name>FK_FactResellerSales_DimEmployee</Name><Name>FK_FactResellerSales_DimReseller</Name><Name>FK_FactResellerSales_DimSalesTerritory</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactResellerSales] ADD &#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimCurrency] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [CurrencyKey]&#x0D;
+    ) REFERENCES [dbo].[DimCurrency] (&#x0D;
+        [CurrencyKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimProduct] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ProductKey]&#x0D;
+    ) REFERENCES [dbo].[DimProduct] (&#x0D;
+        [ProductKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimPromotion] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [PromotionKey]&#x0D;
+    ) REFERENCES [dbo].[DimPromotion] (&#x0D;
+        [PromotionKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimDate] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [OrderDateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimDate1] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [DueDateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimDate2] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ShipDateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimEmployee] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [EmployeeKey]&#x0D;
+    ) REFERENCES [dbo].[DimEmployee] (&#x0D;
+        [EmployeeKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimReseller] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [ResellerKey]&#x0D;
+    ) REFERENCES [dbo].[DimReseller] (&#x0D;
+        [ResellerKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactResellerSales_DimSalesTerritory] FOREIGN KEY &#x0D;
+    (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    ) REFERENCES [dbo].[DimSalesTerritory] (&#x0D;
+        [SalesTerritoryKey]&#x0D;
+    );&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+104|2010-09-30 11:12:56.797000000|dbo|ALTER_TABLE|dbo|FactSurveyResponse|ALTER TABLE [dbo].[FactSurveyResponse] ADD
+	CONSTRAINT [FK_FactSurveyResponse_DateKey] FOREIGN KEY
+	(
+		[DateKey]
+    ) REFERENCES [dbo].[DimDate] (
+        [DateKey]
+    ),
+    CONSTRAINT [FK_FactSurveyResponse_CustomerKey] FOREIGN KEY
+    (
+		[CustomerKey]
+    ) REFERENCES [dbo].[DimCustomer] (
+        [CustomerKey]
+    );
+|﻿<EVENT_INSTANCE><EventType>ALTER_TABLE</EventType><PostTime>2010-09-30T11:12:56.797</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>FactSurveyResponse</ObjectName><ObjectType>TABLE</ObjectType><AlterTableActionList><Create><Constraints><Name>FK_FactSurveyResponse_DateKey</Name><Name>FK_FactSurveyResponse_CustomerKey</Name></Constraints></Create></AlterTableActionList><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>ALTER TABLE [dbo].[FactSurveyResponse] ADD&#x0D;
+	CONSTRAINT [FK_FactSurveyResponse_DateKey] FOREIGN KEY&#x0D;
+	(&#x0D;
+		[DateKey]&#x0D;
+    ) REFERENCES [dbo].[DimDate] (&#x0D;
+        [DateKey]&#x0D;
+    ),&#x0D;
+    CONSTRAINT [FK_FactSurveyResponse_CustomerKey] FOREIGN KEY&#x0D;
+    (&#x0D;
+		[CustomerKey]&#x0D;
+    ) REFERENCES [dbo].[DimCustomer] (&#x0D;
+        [CustomerKey]&#x0D;
+    );&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+105|2010-09-30 11:12:56.800000000|dbo|CREATE_FUNCTION|dbo|udfMinimumDate|
+CREATE FUNCTION [dbo].[udfMinimumDate] (
+    @x DATETIME, 
+    @y DATETIME
+) RETURNS DATETIME
+AS
+BEGIN
+    DECLARE @z DATETIME
+
+    IF @x <= @y 
+        SET @z = @x 
+    ELSE 
+        SET @z = @y
+
+    RETURN(@z)
+END
+|﻿<EVENT_INSTANCE><EventType>CREATE_FUNCTION</EventType><PostTime>2010-09-30T11:12:56.800</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>udfMinimumDate</ObjectName><ObjectType>FUNCTION</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+CREATE FUNCTION [dbo].[udfMinimumDate] (&#x0D;
+    @x DATETIME, &#x0D;
+    @y DATETIME&#x0D;
+) RETURNS DATETIME&#x0D;
+AS&#x0D;
+BEGIN&#x0D;
+    DECLARE @z DATETIME&#x0D;
+&#x0D;
+    IF @x &lt;= @y &#x0D;
+        SET @z = @x &#x0D;
+    ELSE &#x0D;
+        SET @z = @y&#x0D;
+&#x0D;
+    RETURN(@z)&#x0D;
+END&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+106|2010-09-30 11:12:56.813000000|dbo|CREATE_FUNCTION|dbo|udfTwoDigitZeroFill|
+-- Converts the specified integer (which should be < 100 and > -1)
+-- into a two character string, zero filling from the left 
+-- if the number is < 10.
+CREATE FUNCTION [dbo].[udfTwoDigitZeroFill] (@number int) 
+RETURNS char(2)
+AS
+BEGIN
+	DECLARE @result char(2);
+	IF @number > 9 
+		SET @result = convert(char(2), @number);
+	ELSE
+		SET @result = convert(char(2), '0' + convert(varchar, @number));
+	RETURN @result;
+END
+
+|﻿<EVENT_INSTANCE><EventType>CREATE_FUNCTION</EventType><PostTime>2010-09-30T11:12:56.813</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>udfTwoDigitZeroFill</ObjectName><ObjectType>FUNCTION</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+-- Converts the specified integer (which should be &lt; 100 and &gt; -1)&#x0D;
+-- into a two character string, zero filling from the left &#x0D;
+-- if the number is &lt; 10.&#x0D;
+CREATE FUNCTION [dbo].[udfTwoDigitZeroFill] (@number int) &#x0D;
+RETURNS char(2)&#x0D;
+AS&#x0D;
+BEGIN&#x0D;
+	DECLARE @result char(2);&#x0D;
+	IF @number &gt; 9 &#x0D;
+		SET @result = convert(char(2), @number);&#x0D;
+	ELSE&#x0D;
+		SET @result = convert(char(2), '0' + convert(varchar, @number));&#x0D;
+	RETURN @result;&#x0D;
+END&#x0D;
+&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+107|2010-09-30 11:12:56.840000000|dbo|CREATE_FUNCTION|dbo|udfBuildISO8601Date|
+-- Builds an ISO 8601 format date from a year, month, and day specified as integers.
+-- This format of date should parse correctly regardless of SET DATEFORMAT and SET LANGUAGE.
+-- See SQL Server Books Online for more details.
+CREATE FUNCTION [dbo].[udfBuildISO8601Date] (@year int, @month int, @day int)
+RETURNS datetime
+AS 
+BEGIN
+	RETURN cast(convert(varchar, @year) + '-' + [dbo].[udfTwoDigitZeroFill](@month) 
+	    + '-' + [dbo].[udfTwoDigitZeroFill](@day) + 'T00:00:00' 
+	    as datetime);
+END
+|﻿<EVENT_INSTANCE><EventType>CREATE_FUNCTION</EventType><PostTime>2010-09-30T11:12:56.840</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>udfBuildISO8601Date</ObjectName><ObjectType>FUNCTION</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+-- Builds an ISO 8601 format date from a year, month, and day specified as integers.&#x0D;
+-- This format of date should parse correctly regardless of SET DATEFORMAT and SET LANGUAGE.&#x0D;
+-- See SQL Server Books Online for more details.&#x0D;
+CREATE FUNCTION [dbo].[udfBuildISO8601Date] (@year int, @month int, @day int)&#x0D;
+RETURNS datetime&#x0D;
+AS &#x0D;
+BEGIN&#x0D;
+	RETURN cast(convert(varchar, @year) + '-' + [dbo].[udfTwoDigitZeroFill](@month) &#x0D;
+	    + '-' + [dbo].[udfTwoDigitZeroFill](@day) + 'T00:00:00' &#x0D;
+	    as datetime);&#x0D;
+END&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+108|2010-09-30 11:12:56.853000000|dbo|CREATE_VIEW|dbo|vDMPrep|
+-- vDMPrep will be used as a data source by the other data mining views.  
+-- Uses DW data at customer, product, day, etc. granularity and
+-- gets region, model, year, month, etc.
+CREATE VIEW [dbo].[vDMPrep]
+AS
+    SELECT
+        pc.[EnglishProductCategoryName]
+        ,Coalesce(p.[ModelName], p.[EnglishProductName]) AS [Model]
+        ,c.[CustomerKey]
+        ,s.[SalesTerritoryGroup] AS [Region]
+        ,CASE
+            WHEN Month(GetDate()) < Month(c.[BirthDate])
+                THEN DateDiff(yy,c.[BirthDate],GetDate()) - 1
+            WHEN Month(GetDate()) = Month(c.[BirthDate])
+            AND Day(GetDate()) < Day(c.[BirthDate])
+                THEN DateDiff(yy,c.[BirthDate],GetDate()) - 1
+            ELSE DateDiff(yy,c.[BirthDate],GetDate())
+        END AS [Age]
+        ,CASE
+            WHEN c.[YearlyIncome] < 40000 THEN 'Low'
+            WHEN c.[YearlyIncome] > 60000 THEN 'High'
+            ELSE 'Moderate'
+        END AS [IncomeGroup]
+        ,d.[CalendarYear]
+        ,d.[FiscalYear]
+        ,d.[MonthNumberOfYear] AS [Month]
+        ,f.[SalesOrderNumber] AS [OrderNumber]
+        ,f.SalesOrderLineNumber AS LineNumber
+        ,f.OrderQuantity AS Quantity
+        ,f.ExtendedAmount AS Amount  
+    FROM
+        [dbo].[FactInternetSales] f
+    INNER JOIN [dbo].[DimDate] d
+        ON f.[OrderDateKey] = d.[DateKey]
+    INNER JOIN [dbo].[DimProduct] p
+        ON f.[ProductKey] = p.[ProductKey]
+    INNER JOIN [dbo].[DimProductSubcategory] psc
+        ON p.[ProductSubcategoryKey] = psc.[ProductSubcategoryKey]
+    INNER JOIN [dbo].[DimProductCategory] pc
+        ON psc.[ProductCategoryKey] = pc.[ProductCategoryKey]
+    INNER JOIN [dbo].[DimCustomer] c
+        ON f.[CustomerKey] = c.[CustomerKey]
+    INNER JOIN [dbo].[DimGeography] g
+        ON c.[GeographyKey] = g.[GeographyKey]
+    INNER JOIN [dbo].[DimSalesTerritory] s
+        ON g.[SalesTerritoryKey] = s.[SalesTerritoryKey] 
+;
+|﻿<EVENT_INSTANCE><EventType>CREATE_VIEW</EventType><PostTime>2010-09-30T11:12:56.853</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>vDMPrep</ObjectName><ObjectType>VIEW</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+-- vDMPrep will be used as a data source by the other data mining views.  &#x0D;
+-- Uses DW data at customer, product, day, etc. granularity and&#x0D;
+-- gets region, model, year, month, etc.&#x0D;
+CREATE VIEW [dbo].[vDMPrep]&#x0D;
+AS&#x0D;
+    SELECT&#x0D;
+        pc.[EnglishProductCategoryName]&#x0D;
+        ,Coalesce(p.[ModelName], p.[EnglishProductName]) AS [Model]&#x0D;
+        ,c.[CustomerKey]&#x0D;
+        ,s.[SalesTerritoryGroup] AS [Region]&#x0D;
+        ,CASE&#x0D;
+            WHEN Month(GetDate()) &lt; Month(c.[BirthDate])&#x0D;
+                THEN DateDiff(yy,c.[BirthDate],GetDate()) - 1&#x0D;
+            WHEN Month(GetDate()) = Month(c.[BirthDate])&#x0D;
+            AND Day(GetDate()) &lt; Day(c.[BirthDate])&#x0D;
+                THEN DateDiff(yy,c.[BirthDate],GetDate()) - 1&#x0D;
+            ELSE DateDiff(yy,c.[BirthDate],GetDate())&#x0D;
+        END AS [Age]&#x0D;
+        ,CASE&#x0D;
+            WHEN c.[YearlyIncome] &lt; 40000 THEN 'Low'&#x0D;
+            WHEN c.[YearlyIncome] &gt; 60000 THEN 'High'&#x0D;
+            ELSE 'Moderate'&#x0D;
+        END AS [IncomeGroup]&#x0D;
+        ,d.[CalendarYear]&#x0D;
+        ,d.[FiscalYear]&#x0D;
+        ,d.[MonthNumberOfYear] AS [Month]&#x0D;
+        ,f.[SalesOrderNumber] AS [OrderNumber]&#x0D;
+        ,f.SalesOrderLineNumber AS LineNumber&#x0D;
+        ,f.OrderQuantity AS Quantity&#x0D;
+        ,f.ExtendedAmount AS Amount  &#x0D;
+    FROM&#x0D;
+        [dbo].[FactInternetSales] f&#x0D;
+    INNER JOIN [dbo].[DimDate] d&#x0D;
+        ON f.[OrderDateKey] = d.[DateKey]&#x0D;
+    INNER JOIN [dbo].[DimProduct] p&#x0D;
+        ON f.[ProductKey] = p.[ProductKey]&#x0D;
+    INNER JOIN [dbo].[DimProductSubcategory] psc&#x0D;
+        ON p.[ProductSubcategoryKey] = psc.[ProductSubcategoryKey]&#x0D;
+    INNER JOIN [dbo].[DimProductCategory] pc&#x0D;
+        ON psc.[ProductCategoryKey] = pc.[ProductCategoryKey]&#x0D;
+    INNER JOIN [dbo].[DimCustomer] c&#x0D;
+        ON f.[CustomerKey] = c.[CustomerKey]&#x0D;
+    INNER JOIN [dbo].[DimGeography] g&#x0D;
+        ON c.[GeographyKey] = g.[GeographyKey]&#x0D;
+    INNER JOIN [dbo].[DimSalesTerritory] s&#x0D;
+        ON g.[SalesTerritoryKey] = s.[SalesTerritoryKey] &#x0D;
+;&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+111|2010-09-30 11:12:56.877000000|dbo|CREATE_VIEW|dbo|vAssocSeqOrders|
+-- vAssocSeqOrders supports assocation and sequence clustering data mmining models.
+--      - Limits data to FY2004.
+--      - Creates order case table and line item nested table.
+CREATE VIEW [dbo].[vAssocSeqOrders]
+AS
+    SELECT DISTINCT
+        [OrderNumber]
+        ,[CustomerKey]
+        ,[Region]
+        ,[IncomeGroup]
+    FROM
+        [dbo].[vDMPrep] 
+    WHERE
+        [FiscalYear] = '2004'
+|﻿<EVENT_INSTANCE><EventType>CREATE_VIEW</EventType><PostTime>2010-09-30T11:12:56.877</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>vAssocSeqOrders</ObjectName><ObjectType>VIEW</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+-- vAssocSeqOrders supports assocation and sequence clustering data mmining models.&#x0D;
+--      - Limits data to FY2004.&#x0D;
+--      - Creates order case table and line item nested table.&#x0D;
+CREATE VIEW [dbo].[vAssocSeqOrders]&#x0D;
+AS&#x0D;
+    SELECT DISTINCT&#x0D;
+        [OrderNumber]&#x0D;
+        ,[CustomerKey]&#x0D;
+        ,[Region]&#x0D;
+        ,[IncomeGroup]&#x0D;
+    FROM&#x0D;
+        [dbo].[vDMPrep] &#x0D;
+    WHERE&#x0D;
+        [FiscalYear] = '2004'&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+109|2010-09-30 11:12:56.867000000|dbo|CREATE_VIEW|dbo|vTimeSeries|
+
+-- vTimeSeries view supports the creation of time series data mining models.
+--      - Replaces earlier bike models with successor models.
+--      - Abbreviates model names to improve readability in mining model viewer
+--      - Concatenates model and region so that table only has one input.
+--      - Creates a date field indexed to monthly reporting date for use in prediction.
+CREATE VIEW [dbo].[vTimeSeries] 
+AS
+    SELECT 
+        CASE [Model] 
+            WHEN 'Mountain-100' THEN 'M200' 
+            WHEN 'Road-150' THEN 'R250' 
+            WHEN 'Road-650' THEN 'R750' 
+            WHEN 'Touring-1000' THEN 'T1000' 
+            ELSE Left([Model], 1) + Right([Model], 3) 
+        END + ' ' + [Region] AS [ModelRegion] 
+        ,(Convert(Integer, [CalendarYear]) * 100) + Convert(Integer, [Month]) AS [TimeIndex] 
+        ,Sum([Quantity]) AS [Quantity] 
+        ,Sum([Amount]) AS [Amount]
+		,CalendarYear
+		,[Month]
+		,[dbo].[udfBuildISO8601Date] ([CalendarYear], [Month], 25)
+		as ReportingDate
+    FROM 
+        [dbo].[vDMPrep] 
+    WHERE 
+        [Model] IN ('Mountain-100', 'Mountain-200', 'Road-150', 'Road-250', 
+            'Road-650', 'Road-750', 'Touring-1000') 
+    GROUP BY 
+        CASE [Model] 
+            WHEN 'Mountain-100' THEN 'M200' 
+            WHEN 'Road-150' THEN 'R250' 
+            WHEN 'Road-650' THEN 'R750' 
+            WHEN 'Touring-1000' THEN 'T1000' 
+            ELSE Left(Model,1) + Right(Model,3) 
+        END + ' ' + [Region] 
+        ,(Convert(Integer, [CalendarYear]) * 100) + Convert(Integer, [Month])
+		,CalendarYear
+		,[Month]
+		,[dbo].[udfBuildISO8601Date] ([CalendarYear], [Month], 25);
+|﻿<EVENT_INSTANCE><EventType>CREATE_VIEW</EventType><PostTime>2010-09-30T11:12:56.867</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>vTimeSeries</ObjectName><ObjectType>VIEW</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+&#x0D;
+-- vTimeSeries view supports the creation of time series data mining models.&#x0D;
+--      - Replaces earlier bike models with successor models.&#x0D;
+--      - Abbreviates model names to improve readability in mining model viewer&#x0D;
+--      - Concatenates model and region so that table only has one input.&#x0D;
+--      - Creates a date field indexed to monthly reporting date for use in prediction.&#x0D;
+CREATE VIEW [dbo].[vTimeSeries] &#x0D;
+AS&#x0D;
+    SELECT &#x0D;
+        CASE [Model] &#x0D;
+            WHEN 'Mountain-100' THEN 'M200' &#x0D;
+            WHEN 'Road-150' THEN 'R250' &#x0D;
+            WHEN 'Road-650' THEN 'R750' &#x0D;
+            WHEN 'Touring-1000' THEN 'T1000' &#x0D;
+            ELSE Left([Model], 1) + Right([Model], 3) &#x0D;
+        END + ' ' + [Region] AS [ModelRegion] &#x0D;
+        ,(Convert(Integer, [CalendarYear]) * 100) + Convert(Integer, [Month]) AS [TimeIndex] &#x0D;
+        ,Sum([Quantity]) AS [Quantity] &#x0D;
+        ,Sum([Amount]) AS [Amount]&#x0D;
+		,CalendarYear&#x0D;
+		,[Month]&#x0D;
+		,[dbo].[udfBuildISO8601Date] ([CalendarYear], [Month], 25)&#x0D;
+		as ReportingDate&#x0D;
+    FROM &#x0D;
+        [dbo].[vDMPrep] &#x0D;
+    WHERE &#x0D;
+        [Model] IN ('Mountain-100', 'Mountain-200', 'Road-150', 'Road-250', &#x0D;
+            'Road-650', 'Road-750', 'Touring-1000') &#x0D;
+    GROUP BY &#x0D;
+        CASE [Model] &#x0D;
+            WHEN 'Mountain-100' THEN 'M200' &#x0D;
+            WHEN 'Road-150' THEN 'R250' &#x0D;
+            WHEN 'Road-650' THEN 'R750' &#x0D;
+            WHEN 'Touring-1000' THEN 'T1000' &#x0D;
+            ELSE Left(Model,1) + Right(Model,3) &#x0D;
+        END + ' ' + [Region] &#x0D;
+        ,(Convert(Integer, [CalendarYear]) * 100) + Convert(Integer, [Month])&#x0D;
+		,CalendarYear&#x0D;
+		,[Month]&#x0D;
+		,[dbo].[udfBuildISO8601Date] ([CalendarYear], [Month], 25);&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+110|2010-09-30 11:12:56.873000000|dbo|CREATE_VIEW|dbo|vTargetMail|
+-- vTargetMail supports targeted mailing data model
+-- Uses vDMPrep to determine if a customer buys a bike and joins to DimCustomer
+CREATE VIEW [dbo].[vTargetMail] 
+AS
+    SELECT
+        c.[CustomerKey], 
+        c.[GeographyKey], 
+        c.[CustomerAlternateKey], 
+        c.[Title], 
+        c.[FirstName], 
+        c.[MiddleName], 
+        c.[LastName], 
+        c.[NameStyle], 
+        c.[BirthDate], 
+        c.[MaritalStatus], 
+        c.[Suffix], 
+        c.[Gender], 
+        c.[EmailAddress], 
+        c.[YearlyIncome], 
+        c.[TotalChildren], 
+        c.[NumberChildrenAtHome], 
+        c.[EnglishEducation], 
+        c.[SpanishEducation], 
+        c.[FrenchEducation], 
+        c.[EnglishOccupation], 
+        c.[SpanishOccupation], 
+        c.[FrenchOccupation], 
+        c.[HouseOwnerFlag], 
+        c.[NumberCarsOwned], 
+        c.[AddressLine1], 
+        c.[AddressLine2], 
+        c.[Phone], 
+        c.[DateFirstPurchase], 
+        c.[CommuteDistance], 
+        x.[Region], 
+        x.[Age], 
+        CASE x.[Bikes] 
+            WHEN 0 THEN 0 
+            ELSE 1 
+        END AS [BikeBuyer]
+    FROM
+        [dbo].[DimCustomer] c INNER JOIN (
+            SELECT
+                [CustomerKey]
+                ,[Region]
+                ,[Age]
+                ,Sum(
+                    CASE [EnglishProductCategoryName] 
+                        WHEN 'Bikes' THEN 1 
+                        ELSE 0 
+                    END) AS [Bikes]
+            FROM
+                [dbo].[vDMPrep] 
+            GROUP BY
+                [CustomerKey]
+                ,[Region]
+                ,[Age]
+            ) AS [x]
+        ON c.[CustomerKey] = x.[CustomerKey]
+;
+|﻿<EVENT_INSTANCE><EventType>CREATE_VIEW</EventType><PostTime>2010-09-30T11:12:56.870</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>vTargetMail</ObjectName><ObjectType>VIEW</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+-- vTargetMail supports targeted mailing data model&#x0D;
+-- Uses vDMPrep to determine if a customer buys a bike and joins to DimCustomer&#x0D;
+CREATE VIEW [dbo].[vTargetMail] &#x0D;
+AS&#x0D;
+    SELECT&#x0D;
+        c.[CustomerKey], &#x0D;
+        c.[GeographyKey], &#x0D;
+        c.[CustomerAlternateKey], &#x0D;
+        c.[Title], &#x0D;
+        c.[FirstName], &#x0D;
+        c.[MiddleName], &#x0D;
+        c.[LastName], &#x0D;
+        c.[NameStyle], &#x0D;
+        c.[BirthDate], &#x0D;
+        c.[MaritalStatus], &#x0D;
+        c.[Suffix], &#x0D;
+        c.[Gender], &#x0D;
+        c.[EmailAddress], &#x0D;
+        c.[YearlyIncome], &#x0D;
+        c.[TotalChildren], &#x0D;
+        c.[NumberChildrenAtHome], &#x0D;
+        c.[EnglishEducation], &#x0D;
+        c.[SpanishEducation], &#x0D;
+        c.[FrenchEducation], &#x0D;
+        c.[EnglishOccupation], &#x0D;
+        c.[SpanishOccupation], &#x0D;
+        c.[FrenchOccupation], &#x0D;
+        c.[HouseOwnerFlag], &#x0D;
+        c.[NumberCarsOwned], &#x0D;
+        c.[AddressLine1], &#x0D;
+        c.[AddressLine2], &#x0D;
+        c.[Phone], &#x0D;
+        c.[DateFirstPurchase], &#x0D;
+        c.[CommuteDistance], &#x0D;
+        x.[Region], &#x0D;
+        x.[Age], &#x0D;
+        CASE x.[Bikes] &#x0D;
+            WHEN 0 THEN 0 &#x0D;
+            ELSE 1 &#x0D;
+        END AS [BikeBuyer]&#x0D;
+    FROM&#x0D;
+        [dbo].[DimCustomer] c INNER JOIN (&#x0D;
+            SELECT&#x0D;
+                [CustomerKey]&#x0D;
+                ,[Region]&#x0D;
+                ,[Age]&#x0D;
+                ,Sum(&#x0D;
+                    CASE [EnglishProductCategoryName] &#x0D;
+                        WHEN 'Bikes' THEN 1 &#x0D;
+                        ELSE 0 &#x0D;
+                    END) AS [Bikes]&#x0D;
+            FROM&#x0D;
+                [dbo].[vDMPrep] &#x0D;
+            GROUP BY&#x0D;
+                [CustomerKey]&#x0D;
+                ,[Region]&#x0D;
+                ,[Age]&#x0D;
+            ) AS [x]&#x0D;
+        ON c.[CustomerKey] = x.[CustomerKey]&#x0D;
+;&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
+112|2010-09-30 11:12:56.880000000|dbo|CREATE_VIEW|dbo|vAssocSeqLineItems|
+CREATE VIEW [dbo].[vAssocSeqLineItems] 
+AS
+    SELECT
+        OrderNumber
+        ,LineNumber
+        ,Model
+    FROM
+        [dbo].[vDMPrep] 
+    WHERE
+        FiscalYear = '2004'
+;
+|﻿<EVENT_INSTANCE><EventType>CREATE_VIEW</EventType><PostTime>2010-09-30T11:12:56.880</PostTime><SPID>51</SPID><ServerName>JPJOFRE-NB16</ServerName><LoginName>NT AUTHORITY\SYSTEM</LoginName><UserName>dbo</UserName><DatabaseName>AdventureWorksDW2008</DatabaseName><SchemaName>dbo</SchemaName><ObjectName>vAssocSeqLineItems</ObjectName><ObjectType>VIEW</ObjectType><TSQLCommand><SetOptions ANSI_NULLS=""ON"" ANSI_NULL_DEFAULT=""ON"" ANSI_PADDING=""ON"" QUOTED_IDENTIFIER=""ON"" ENCRYPTED=""FALSE""/><CommandText>&#x0D;
+CREATE VIEW [dbo].[vAssocSeqLineItems] &#x0D;
+AS&#x0D;
+    SELECT&#x0D;
+        OrderNumber&#x0D;
+        ,LineNumber&#x0D;
+        ,Model&#x0D;
+    FROM&#x0D;
+        [dbo].[vDMPrep] &#x0D;
+    WHERE&#x0D;
+        FiscalYear = '2004'&#x0D;
+;&#x0D;
+</CommandText></TSQLCommand></EVENT_INSTANCE>
