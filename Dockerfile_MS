@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/mssql/server
+EXPOSE 1433
+ARG SA_PASSWORD
+ENV SA_PASSWORD=${SA_PASSWORD}
+WORKDIR /
+COPY OLTP/sqlserver/install.sh .
+COPY OLTP/sqlserver/startup.sh .
+COPY data/AdventureWorkOLTP /data/AdventureWorkOLTP/
+COPY data/AdventureWorkDW/ /data/AdventureWorkDW/
+COPY data/AdventureWorkDWDemo/ /data/AdventureWorkDWDemo/
+
+CMD /bin/bash ./startup.sh
