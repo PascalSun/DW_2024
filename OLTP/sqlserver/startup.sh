@@ -1,9 +1,7 @@
 #!/bin/bash
-
 echo "Starting SQL Server..."
 # Start SQL Server in the background
 /opt/mssql/bin/sqlservr &
-
 # Function to check if SQL Server is ready
 check_sql_server() {
   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "YourStrongPassw0rd" -Q "SELECT 1" > /dev/null 2>&1
