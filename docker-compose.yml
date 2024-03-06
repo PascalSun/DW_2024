@@ -11,6 +11,8 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
   pgadmin:
     container_name: pgadmin4
     image: dpage/pgadmin4
@@ -31,3 +33,7 @@ services:
       SA_PASSWORD: "YourStrongPassw0rd"
     ports:
       - "1433:1433"
+
+
+volumes:
+  postgres_data:
