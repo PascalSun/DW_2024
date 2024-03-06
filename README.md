@@ -18,28 +18,42 @@ Let's give the AdventureWorks database as an example to illustrate the above con
 
 ### Step 0: Cloning a repository
 
-#### Option 1
-
-You can download the .zip file to your device then upzip the .zip file.
-
-1. On GitHub.com, navigate to the main page of the repository.
-2. Above the list of files, click <> Code.
-3. Click "Download ZIP"
-
-#### Option 2
-
 ```
-git clone git@github.com:PascalSun/DW_2024.git
+git clone https://github.com/PascalSun/DW_2024.git
 ```
 
+If you are not familiar with git, please learn the basic concepts about git and GitHub.
+
+It is a must-have skill for a software engineer.
+
+Here is a good tutorial for beginners: https://www.w3schools.com/git/
+And here is official documentation: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Also, if you do not have a code editor, please install the VSCODE: https://code.visualstudio.com/download
 
 ### For the database part
 
 Make sure you have docker and docker-compose installed on your machine.
 
-Then run `docker-compose up -d` to start the database.
+Then run `docker compose up -d` to start the database and jupyter lab environment.
 
-### For the python code part
+Try to understand how many services inside the docker compose file, and what they are used for.
+Which part of the data warehouse project do they belong to?
+
+If you are not familiar with docker, please learn the basic concepts about docker.
+We just put down a tutorial for you to get started with docker: https://uwa-nlp-tlp.gitbook.io/it-support/docker-101
+
+#### Special part for Windows users
+If you run the `docker compose up` command within the powershell or terminal provided by Windows.
+Due to the end of file conflict between Unix based and Windows-based systems, sql server will not start properly.
+You need to open the whole project with VSCode, and go to the file `OLTP/sqlserver/install.sh`, 
+
+#### Local python dev environment setup
+
+We already provide a container inside the docker-compose file,
+but if you want to run the code locally, you can follow the steps below.
+We encourage you to explore both options, and understand the pros and cons of each option.
+We will not assess it, but the interviewers may ask you about it.
 
 1. Need to install graphviz and corresponding python package
     - `brew install graphviz`
