@@ -28,6 +28,10 @@ You can download the .zip file to your device then upzip the .zip file.
 
 #### Option 2
 
+```
+git clone git@github.com:PascalSun/DW_2024.git
+```
+
 
 ### For the database part
 

@@ -25,6 +25,7 @@ services:
 
   sqlserverdb:
     container_name: sqlserver
+    platform: linux/amd64
     build:
       context: ./
       dockerfile: Dockerfile_MS
