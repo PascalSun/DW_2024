@@ -47,6 +47,7 @@ services:
       - .:/usr/src/app
     environment:
       JUPYTER_ENABLE_LAB: "yes"
+    platform: linux/amd64
 
 volumes:
   postgres_data:
