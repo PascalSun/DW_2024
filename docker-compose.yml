@@ -35,6 +35,19 @@ services:
     ports:
       - "1433:1433"
 
+  jupyterlab:
+    container_name: jupyterlab
+    build:
+      context: ./
+      dockerfile: Dockerfile_JupyterLab
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    platform: linux/amd64
 
 volumes:
   postgres_data:

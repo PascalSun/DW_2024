@@ -1,0 +1,18 @@
+# Use the official Jupyter base image
+FROM jupyter/base-notebook
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the requirements file into the container
+COPY requirements.txt ./
+
+# Install any dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port JupyterLab will run on
+EXPOSE 8888
+
+# Start JupyterLab
+# Note: The base Jupyter Docker images include a startup script that handles this
+CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
