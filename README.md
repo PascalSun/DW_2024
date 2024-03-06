@@ -27,6 +27,7 @@ If you are not familiar with git, please learn the basic concepts about git and 
 It is a must-have skill for a software engineer.
 
 Here is a good tutorial for beginners: https://www.w3schools.com/git/
+
 And here is official documentation: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 Also, if you do not have a code editor, please install the VSCODE: https://code.visualstudio.com/download
@@ -38,15 +39,30 @@ Make sure you have docker and docker-compose installed on your machine.
 Then run `docker compose up -d` to start the database and jupyter lab environment.
 
 Try to understand how many services inside the docker compose file, and what they are used for.
+
 Which part of the data warehouse project do they belong to?
 
 If you are not familiar with docker, please learn the basic concepts about docker.
+
 We just put down a tutorial for you to get started with docker: https://uwa-nlp-tlp.gitbook.io/it-support/docker-101
 
 #### Special part for Windows users
+
 If you run the `docker compose up` command within the powershell or terminal provided by Windows.
+
 Due to the end of file conflict between Unix based and Windows-based systems, sql server will not start properly.
-You need to open the whole project with VSCode, and go to the file `OLTP/sqlserver/install.sh`, 
+
+You need to open the whole project with VSCode, and go to the file `OLTP/sqlserver/install.sh`, click right
+bottom-corner, and change the line ending from `CRLF` to `LF`, and then save it.
+
+You need to do the same for file `OLTP/sqlserver/startup.sh`.
+
+<video width="320" height="240" controls>
+  <source src="imgs/change_end_of_file.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Then run the `docker compose up -d` command again.
 
 #### Local python dev environment setup
 
