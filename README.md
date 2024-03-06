@@ -57,10 +57,7 @@ bottom-corner, and change the line ending from `CRLF` to `LF`, and then save it.
 
 You need to do the same for file `OLTP/sqlserver/startup.sh`.
 
-<video width="320" height="240" controls>
-  <source src="imgs/change_end_of_file.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![change of end_file](imgs/change_end_of_file.gif)
 
 Then run the `docker compose up -d` command again.
 
