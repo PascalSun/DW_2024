@@ -75,6 +75,17 @@ bottom-corner, and change the line ending from `CRLF` to `LF`, and then save it.
 You need to do the same for file `OLTP/sqlserver/startup.sh`.
 
 ![change of end_file](imgs/change_end_of_file.gif)
+#### Special part for Mac M1/M2/M3 users
+
+For users with ARM architecture, you may encounter the issue that the `sqlserver` and `jupyterlab` container cannot start properly.
+This is because the `mcr.microsoft.com/mssql/server` image does not support ARM architecture.
+To resolve this issue, you need to change the setting in docker, enable the `Use Rosetta for x86_64/amd64 emulation on Apple Silicon` option.
+
+Open setting => General tab in Docker Desktop, and check the option `Use Rosetta for x86_64/amd64 emulation on Apple Silicon`. Click `Apply & Restart` to restart the docker desktop.
+
+Clean the images, then run the `docker compose up --build -d` command again.
+
+![mac](imgs/mac.png)
 
 Then run the 
 ```bash
