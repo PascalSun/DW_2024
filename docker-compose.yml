@@ -43,6 +43,7 @@ services:
     restart: always
     ports:
       - "8888:8888"
+      - "9092:9092"
     volumes:
       - .:/usr/src/app
     environment:
