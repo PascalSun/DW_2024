@@ -47,19 +47,22 @@ If you are not familiar with docker, please learn the basic concepts about docke
 We just put down a tutorial for you to get started with docker: https://uwa-nlp-tlp.gitbook.io/it-support/docker-101
 
 #### Debug hint
-To confirm all the four containers are running, you should be able to run 
+
+To confirm all the four containers are running, you should be able to run
 
 ```bash
 docker ps 
 ```
+
 And it will show up four containers: pgdb, pgadmin, sqlserver and jupyterlab.
 
 If you do not have this four, check which one is missing, and try to check the logs of that container via command
+
 ```bash
 docker logs -f <container_name>
 ```
-to see what is wrong.
 
+to see what is wrong.
 
 #### Special part for Windows users
 
@@ -69,29 +72,35 @@ Due to the end of file conflict between Unix based and Windows-based systems, sq
 
 So in this suitutation, you will find you miss the `sqlserver` container when you run `docker ps`.
 
-To resolve this issue, you need to open the whole project with VSCode, and go to the file `OLTP/sqlserver/install.sh`, click right
+To resolve this issue, you need to open the whole project with VSCode, and go to the file `OLTP/sqlserver/install.sh`,
+click right
 bottom-corner, and change the line ending from `CRLF` to `LF`, and then save it.
 
 You need to do the same for file `OLTP/sqlserver/startup.sh`.
 
 ![change of end_file](imgs/change_end_of_file.gif)
+Then run the
+
+```bash
+docker compose up --build -d
+```
+
+command again to rebuild the image and recreate the containers.
+
 #### Special part for Mac M1/M2/M3 users
 
-For users with ARM architecture, you may encounter the issue that the `sqlserver` and `jupyterlab` container cannot start properly.
+For users with ARM architecture, you may encounter the issue that the `sqlserver` and `jupyterlab` container cannot
+start properly.
 This is because the `mcr.microsoft.com/mssql/server` image does not support ARM architecture.
-To resolve this issue, you need to change the setting in docker, enable the `Use Rosetta for x86_64/amd64 emulation on Apple Silicon` option.
+To resolve this issue, you need to change the setting in docker, enable
+the `Use Rosetta for x86_64/amd64 emulation on Apple Silicon` option.
 
-Open setting => General tab in Docker Desktop, and check the option `Use Rosetta for x86_64/amd64 emulation on Apple Silicon`. Click `Apply & Restart` to restart the docker desktop.
+Open setting => General tab in Docker Desktop, and check the
+option `Use Rosetta for x86_64/amd64 emulation on Apple Silicon`. Click `Apply & Restart` to restart the docker desktop.
 
 Clean the images, then run the `docker compose up --build -d` command again.
 
 ![mac](imgs/mac.png)
-
-Then run the 
-```bash
-docker compose up --build -d
-```
-command again to rebuild the image and recreate the containers.
 
 #### Local python dev environment setup
 
